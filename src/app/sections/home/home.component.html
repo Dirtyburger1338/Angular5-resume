@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="profile-picture-wrapper">
+    <div class="center">
+      <img id="profile-picture" [src]="profilePicture" class="profile-picture" />
+    </div>
+  </div>
+  <div class="profile-picture-text">
+    <p>Henrik Larsson</p>
+  </div>
+  <hr/>
+</div>
+
+<div *ngIf="goals">
+  <div class="container color-light" @goals style="min-height: 100px; background-color: orange;">
+    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)" style="min-height: 20px; background-color: green;">
+      {{ goal }}
+    </p>
+  </div>
+</div>
