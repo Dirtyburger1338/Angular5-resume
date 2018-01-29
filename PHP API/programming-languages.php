@@ -65,7 +65,7 @@ $arr = array(
       ),
       array(
         "Id" => "",
-        "Language" => "Pingis racket",
+        "Language" => "Pingis racket 🏓",
         "Stars" => "5/5"
       )
 );

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 .container {
     background-color: white;
     margin-top: 0;
@@ -17,7 +18,6 @@
 
 .grid-right-outer {
     width: 50%;
-    /*background-color: green;*/
     font-family: "Open Sans";
     font-size: 14px;
     min-height: 200px;
