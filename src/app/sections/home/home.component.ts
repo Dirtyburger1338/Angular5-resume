@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   profilePicture: string;
   goals: string[] = [];
+  email = 'me@henriklarsson.eu';
+  name = 'Henrik Larsson';
 
   constructor() { }
 

@@ -5,15 +5,34 @@
     </div>
   </div>
   <div class="profile-picture-text">
-    <p>Henrik Larsson</p>
+    <p>{{ name }}</p>
   </div>
   <hr/>
+  <div class="footer">
+    <div class="footer-1">
+      <div>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="footer-2">
+      <div>
+        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+        <p>{{email}}</p>
+      </div>
+    </div>
+    <div class="footer-3">
+      <div>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </div>
 </div>
 
-<div *ngIf="goals">
+<!-- <div *ngIf="goals">
   <div class="container color-light" @goals style="min-height: 100px; background-color: orange;">
     <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)" style="min-height: 20px; background-color: green;">
       {{ goal }}
     </p>
   </div>
-</div>
+</div> -->

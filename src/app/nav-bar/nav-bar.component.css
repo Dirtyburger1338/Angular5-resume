@@ -20,15 +20,11 @@ nav ul {
   background-color: white;
 }
 
-li>i {
-  color: #000000ab;
-}
-
-nav ul li {
+nav > ul > li {
   display: block;
   float: left;
   transition: all 0.3s ease-in;
-  width: 20%;
+  width: 25%;
   background-color: white;
   margin-bottom: 20px;
 }
@@ -50,19 +46,12 @@ nav ul li a:hover {
   color: white;
 }
 
-.link-active>a {
-  color: #57cefd !important;
-  padding: 0;
-  margin: 0;
-  background: rgba(51, 51, 51, 0.85);
+.link-active > a {
+  background-color: rgba(51, 51, 51, 0.85);
 }
 
-.link-active > i {
-  color: #57cefd;
-}
-
-li:hover > i {
-  color: orange;
+.link-active > a > i, .link-active > a > p {
+  color: #1dd0f0;
 }
 
 nav>ul>li>a>p {

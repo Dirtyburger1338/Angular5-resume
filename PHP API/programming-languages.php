@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 
 $arr = array(
       array(
-        "Id" => "1",
+        "Id" => "",
         "Language" => "C#",
         "Stars" => "3/5"
       ),
@@ -60,11 +60,14 @@ $arr = array(
       ),
       array(
         "Id" => "",
-        "Language" => "SQL",
+        "Language" => "T-SQL",
         "Stars" => "2/5"
+      ),
+      array(
+        "Id" => "",
+        "Language" => "Pingis racket",
+        "Stars" => "5/5"
       )
-
-      
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);

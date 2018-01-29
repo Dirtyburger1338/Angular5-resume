@@ -15,6 +15,11 @@ export class ProgrammingLanguageService {
 
   public getProgrammingLanguages(): ProgrammingLanguages[] {
     try {
+
+      if (this.programmingLanguages.length > 0) {
+        return this.programmingLanguages;
+      }
+
       this.http.get<ProgrammingLanguages[]>(this.apiProgrammingUrl).subscribe(respone => {
 
         for (let i = 0; i < respone.length; i++) {
@@ -28,7 +33,6 @@ export class ProgrammingLanguageService {
     } catch (e) {
       console.log(e);
     } finally {
-      this.showProgrammingSpinner = false;
     }
   }
 
@@ -54,11 +58,11 @@ export class ProgrammingLanguageService {
       let rhsStarBuilder = '';
 
       for (let i = 0; i < lhsLength; i++) {
-        lhsStarBuilder += '<span class="glyphicon glyphicon-star filled" style="color: crimson; font-size: 20px;"></span>';
+        lhsStarBuilder += '<span class="fa fa-star filled" style="color: #169eb6; font-size: 20px;"></span>';
       }
 
       for (let i = 0; i < rhsLength - lhsLength; i++) {
-        rhsStarBuilder += '<span class="glyphicon glyphicon-star" style="color: #b3b3b3; font-size: 20px;"></span>';
+        rhsStarBuilder += '<span class="fa fa-star-o" style="color: #169eb6; font-size: 20px;"></span>';
       }
 
       returnValue = lhsStarBuilder + rhsStarBuilder;

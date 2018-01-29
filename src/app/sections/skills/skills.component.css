@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.container {
+    background-color: white;
+    margin-top: 0;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.grid-left-outer {
+    width: 50%;
+    float: left;
+}
+
+.grid-left-inner, .grid-right-inner {
+    padding: 10px;
+}
+
+.grid-right-outer {
+    width: 50%;
+    /*background-color: green;*/
+    font-family: "Open Sans";
+    font-size: 14px;
+    min-height: 200px;
+    float: left;
+    padding-top: 70px;
+}
+
+#programming-table {
+    width: 100%;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.heading-text {
+    text-transform: uppercase;
+    color: #169eb6;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: Sans-serif;
+}
+
+.col-1 {
+    text-align: center;
+    padding: 5px;
+}
+
+.col-2, .col-3 {
+    text-align: left;
+    padding: 5px;
+}
+
+#programming-table td {
+    font-size: 16px;
+    font-family: "Open Sans";
+}
+
+th.col-3, th.col-2 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Open Sans";
+}
+
+#programming-table tr:nth-child(odd) {
+    background-color: rgb(237, 237, 237);
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}

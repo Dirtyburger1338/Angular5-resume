@@ -1,1 +1,34 @@
-<p>skills works!</p>
+<div class="container">
+    <div class="grid-left-outer">
+        <div class="grid-left-inner">
+            <div *ngIf="programmingLanguages.length !== 0 && !showProgrammingSpinner">
+                <div @skills>
+                    <div class="heading-text">Software summary</div>
+                    <table id="programming-table">
+                        <th class="col-1"></th>
+                        <th class="col-2">Language</th>
+                        <th class="col-3">Personal rating</th>
+                        <tr *ngFor="let language of programmingLanguages">
+                            <td class="col-1">{{ language.Id }}</td>
+                            <td class="col-2">{{ language.Language }}</td>
+                            <td class="col-2" [innerHTML]="language.Stars | safeHtml"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="spinner-outer-wrapper" *ngIf="programmingLanguages.length === 0">
+                <div class="spinner-wrapper-aside">
+                    <app-spinner></app-spinner>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid-right-outer">
+        <div class="grid-right-inner">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repellendus odio voluptatibus nihil! Eligendi
+                perferendis nisi, aperiam iusto, modi eaque itaque error dicta veniam quasi pariatur autem exercitationem
+                facilis odio.</p>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+</div>

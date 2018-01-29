@@ -1,22 +1,3 @@
 <div class="container">
 
-    <div *ngIf="programmingLanguages && !showProgrammingSpinner">
-        <div class="heading-text">Software summary</div>
-        <table id="programming-table">
-            <th class="col-1">#</th>
-            <th class="col-2">Language</th>
-            <th class="col-2">Personal rating</th>
-            <tr *ngFor="let language of programmingLanguages">
-                <td class="col-1">{{ language.Id }}</td>
-                <td class="col-2">{{ language.Language }}</td>
-                <td class="col-2" [innerHTML]="language.Stars | safeHtml"></td>
-            </tr>
-        </table>
-    </div>
-    <!-- <div class="spinner-outer-wrapper" *ngIf="showProgrammingSpinner">
-                <div class="spinner-wrapper-aside">
-                    <app-spinner></app-spinner>
-                </div>
-            </div> -->
-
 </div>

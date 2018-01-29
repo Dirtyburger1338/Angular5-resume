@@ -31,9 +31,29 @@
     padding-top: 20px;
 }
 
+.footer-1, .footer-2, .footer-3 {
+    float: left;
+    width: 33%;
+}
+
+.footer-1, .footer-2, .footer-3>div {
+    text-align: center;
+}
+
+.footer-2 {}
+
+.footer-3 {}
+
+.clear-both {
+    clear: both;
+}
+
+.footer > div > div > i {
+    font-size: 50px;
+}
+
 @media screen and (max-width: 1100px) {
     .container {
         max-width: 100%;
     }
 }
-

@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+p {
+    font-family: "Open Sans";
+}
+
+#profile-picture {
+    border-radius: 50%;
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 300px;
+}
+
+.profile-picture-wrapper {
+    width: 100%;
+}
+
+.center {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.profile-picture-text>p {
+    font-family: 'Tangerine', cursive;
+    text-align: center;
+    font-size: 70px;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    margin-top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.footer-1, .footer-2, .footer-3 {
+    float: left;
+    width: 33%;
+}
+
+.footer-1, .footer-2, .footer-3>div {
+    text-align: center;
+}
+
+.footer-2 {}
+
+.footer-3 {}
+
+.clear-both {
+    clear: both;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer > div > div > i {
+    font-size: 50px;
+}
+
+.footer > div > div > p {
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}

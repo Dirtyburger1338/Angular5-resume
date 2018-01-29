@@ -13,26 +13,26 @@ export class NavBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.setFirstNavbarElementStyleOnLoad();
+   // this.setFirstNavbarElementStyleOnLoad();
     this.hideGlobalSpinner();
   }
 
   setFirstNavbarElementStyleOnLoad() {
-    const navbar = $('nav > ul > li');
-    navbar[0].classList.add('link-active');
+  /*  const navbar = $('nav > ul > li');
+    navbar[0].classList.add('link-active');*/
   }
 
   changeActiveLink(input) {
-    this.resetLinksCss();
-    input.path[1].classList.add('link-active');
+   // this.resetLinksCss();
+  //  input.path[1].classList.add('link-active');
   }
 
   resetLinksCss() {
-    const navbar = $('nav > ul > li');
+  //  const navbar = $('nav > ul > li');
 
-    for (let i = 0; i < navbar.length; i++) {
-      navbar[i].classList.remove('link-active');
-    }
+  //  for (let i = 0; i < navbar.length; i++) {
+ //     navbar[i].classList.remove('link-active');
+  //  }
   }
 
   hideGlobalSpinner() {

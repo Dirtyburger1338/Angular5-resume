@@ -1,0 +1,17 @@
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner {
+    content: '';
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    border-top: 2px solid rgb(0, 56, 99);
+    border-right: 2px solid transparent;
+    animation: spinner .7s linear infinite;
+    margin: 0 auto;  
+  }

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
@@ -12,6 +13,9 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SafeHtmlPipe } from './safe-html.pipe';
 
+import { ProgrammingLanguageService } from './data-access/api/programming-language.service';
+import { SpinnerComponent } from './spinner/spinner.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +25,16 @@ import { SafeHtmlPipe } from './safe-html.pipe';
     EducationComponent,
     SkillsComponent,
     NavBarComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProgrammingLanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

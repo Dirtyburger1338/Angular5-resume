@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ProgrammingLanguageService } from '../../data-access/api/programming-language.service';
-import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 
 @Component({
   selector: 'app-education',
@@ -9,7 +7,8 @@ import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 })
 export class EducationComponent implements OnInit {
 
-  constructor(private _dao: ProgrammingLanguageService) { }
+
+  constructor() { }
 
   ngOnInit() {
   }
