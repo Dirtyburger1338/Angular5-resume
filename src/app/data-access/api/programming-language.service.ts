@@ -20,16 +20,23 @@ export class ProgrammingLanguageService {
         return this.programmingLanguages;
       }
 
-      this.http.get<ProgrammingLanguages[]>(this.apiProgrammingUrl).subscribe(respone => {
+      this.http.get<ProgrammingLanguages[]>(this.apiProgrammingUrl).subscribe(response => {
 
-        for (let i = 0; i < respone.length; i++) {
-          const tmp = new ProgrammingLanguages(respone[i].Id, respone[i].Language, this.generateStars(respone[i].Stars));
+        for (let i = 0; i < response.length; i++) {
+
+          const tmp = new ProgrammingLanguages(
+            response[i].Id,
+            response[i].Language,
+            this.generateStars(response[i].Stars),
+            response[i].Description);
+
           this.programmingLanguages.push(tmp);
         }
 
       });
 
       return this.programmingLanguages;
+
     } catch (e) {
       console.log(e);
     } finally {

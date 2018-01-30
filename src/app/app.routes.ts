@@ -7,13 +7,13 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { ContactComponent } from './sections/contact/contact.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
+    { path: '', redirectTo: 'about', pathMatch: 'full' },
+    // { path: 'home', component: HomeComponent },
     { path: 'about', component:  AboutComponent },
     { path: 'education', component: EducationComponent },
     { path: 'skills', component:  SkillsComponent},
     { path: 'contact', component: ContactComponent },
-    { path: '**', redirectTo: '/home' }
+    { path: '**', redirectTo: '/about' }
 ];
 
 

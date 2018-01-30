@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 .container {
     background-color: white;
     margin-top: 0;
@@ -63,7 +62,33 @@ th.col-3, th.col-2 {
 }
 
 #programming-table tr:nth-child(odd) {
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(233, 233, 233);
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+}
+
+#programming-table tr:nth-child(even) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#programming-table>tbody>tr:hover {
+    background-color: black;
+    color: white;
+    transform: translateX(10px);
+    transform: translateZ(10);
+    opacity: .8;
+    cursor: pointer;
+}
+
+#programming-table>tbody>tr:hover::after {
+    content: '\25C0';
+    padding-right: 10px;
+    border: 1px;
+}
+
+.programmingDescriptionHeading {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
 }

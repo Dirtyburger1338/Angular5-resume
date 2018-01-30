@@ -8,8 +8,8 @@
                         <th class="col-1"></th>
                         <th class="col-2">Language</th>
                         <th class="col-3">Personal rating</th>
-                        <tr *ngFor="let language of programmingLanguages">
-                            <td class="col-1">{{ language.Id }}</td>
+                        <tr *ngFor="let language of programmingLanguages" (click)="changeProgrammingDescription(language.Id)">
+                            <td class="col-1"></td>
                             <td class="col-2">{{ language.Language }}</td>
                             <td class="col-2" [innerHTML]="language.Stars | safeHtml"></td>
                         </tr>
@@ -25,9 +25,13 @@
     </div>
     <div class="grid-right-outer">
         <div class="grid-right-inner">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repellendus odio voluptatibus nihil! Eligendi
-                perferendis nisi, aperiam iusto, modi eaque itaque error dicta veniam quasi pariatur autem exercitationem
-                facilis odio.</p>
+            <div *ngIf="programmingDescription.length > 0">
+                <h1 class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
+                <p [innerHTML]="programmingDescription[0].Description"></p>
+            </div>
+            <div *ngIf="programmingDescription.length === 0">
+                <p>&#9668; (Click)</p>
+            </div>
         </div>
     </div>
     <div class="clear-both"></div>
