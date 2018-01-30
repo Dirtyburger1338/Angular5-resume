@@ -4,6 +4,7 @@
             <div *ngIf="programmingLanguages.length !== 0 && !showProgrammingSpinner">
                 <div @skills>
                     <div class="heading-text">Software summary</div>
+                    <div class="summary-click">&#8627; click a language for a short summary</div>
                     <table id="programming-table">
                         <th class="col-1"></th>
                         <th class="col-2">Language</th>
@@ -23,21 +24,21 @@
             </div>
         </div>
     </div>
-    
-        <div class="grid-right-outer">
-            <div class="grid-right-inner">
 
-                <div *ngIf="programmingDescription.length > 0">
-                    <h1 [@descriptionHeader]="programmingDescription[0].Id" class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
-                    <p class="programmingDescriptionBody" [@descriptionBody]="programmingDescription[0].Id" [innerHTML]="programmingDescription[0].Description | safeHtml"></p>
-                </div>
+    <div class="grid-right-outer">
+        <div class="grid-right-inner">
 
-                <div *ngIf="programmingDescription.length === 0">
-                    <p>&#9668; (Click)</p>
-                </div>
+            <div *ngIf="programmingDescription.length > 0">
+                <h1 [@descriptionHeader]="programmingDescription[0].Id" class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
+                <div class="programmingDescriptionBody" [@descriptionBody]="programmingDescription[0].Id" [innerHTML]="programmingDescription[0].Description | safeHtml"></div>
+            </div>
+
+            <div *ngIf="programmingDescription.length === 0">
+                <p>&#9668; (Click)</p>
             </div>
         </div>
-    
+    </div>
+
     <div class="clear-both"></div>
 
 

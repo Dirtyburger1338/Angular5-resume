@@ -7,7 +7,7 @@ $arr = array(
         "Id" => "1",
         "Language" => "C#",
         "Stars" => "3/5",
-        "Description" => "This is the primary language I currently use in my day to day work. Guess I know a thing or two 😊"
+        "Description" => "This is the primary language I currently use in my day to day work. Guess I know a thing or two here 😊"
       ),
       array(
         "Id" => "2",
@@ -19,7 +19,7 @@ $arr = array(
         "Id" => "3",
         "Language" => "Java",
         "Stars" => "1/5",
-        "Description" => "Made some basic console application early on in my University degree."
+        "Description" => "Made some basic console applications early on and a tiny webb-app in my University studies."
       ),
       array(
         "Id" => "4",
@@ -31,8 +31,7 @@ $arr = array(
         "Id" => "5",
         "Language" => "Angular 2+",
         "Stars" => "1/5",
-        "Description" => "This page is built with Angular 5, but I have not build anything in production - yet.<br/><br/>
-        However, I'm intrested in building an application with Angular 5 as a front-end framework and with C# as \"Code behind\". Then with whatever API inbetween. "
+        "Description" => "This page is built with Angular 5, but I have not build anything in production - yet."
       ),
       array(
         "Id" => "6",
@@ -50,19 +49,19 @@ $arr = array(
         "Id" => "8",
         "Language" => "JavaScript",
         "Stars" => "2/5",
-        "Description" => "var omg = \"everything is a string language\"; // *wink wink*"
+        "Description" => "<span style='background-color: black; opacity: 0.8; padding: 10px;'><span style='color: #169eb6;'>var</span> <span style='color: lightblue;'>omg</span> <span style='color: white;'>=<span> <span style='color: #db6923'>\"everything is a string language\"</span><span style='color: white;'>;</span> <span style='color: green;'>// *wink wink*</span></span>"
       ),
       array(
         "Id" => "9",
         "Language" => "TypeScript",
         "Stars" => "1/5",
-        "Description" => "Compile me to pretty JS please."
+        "Description" => " I do know a little here aswell."
       ),
       array(
         "Id" => "10",
         "Language" => "PHP",
         "Stars" => "1/5",
-        "Description" => "Serverside language. Used when I have an apache server e.g one.com hosting. Not alot though."
+        "Description" => "Used when I have an apache server e.g one.com hosting. Don't know alot though."
       ),
       array(
         "Id" => "11",
@@ -77,11 +76,41 @@ $arr = array(
         "Description" => "This is the other part of my day to day work. Stored prosedures mostly."
       ),
       array(
+        "Id" => "13",
+        "Language" => "ASP.NET MVC",
+        "Stars" => "2/5",
+        "Description" => "Guess I can make some magic happen here, have not used in production yet though."
+      ),
+      array(
+        "Id" => "14",
+        "Language" => "ASP.NET Web forms",
+        "Stars" => "2/5",
+        "Description" => "Know a little here aswell. But I don't really like it."
+      ),
+      array(
+        "Id" => "15",
+        "Language" => "EpiServer 6 (CMS)",
+        "Stars" => "1/5",
+        "Description" => "Define page, display properties. Pretty much. I know there is more too it of course."
+      ),
+      array(
+        "Id" => "16",
+        "Language" => "Python",
+        "Stars" => "1/5",
+        "Description" => "A tiny bit. Might be more in the near future (machine learning)."
+      ),
+      array(
         "Id" => "1337",
         "Language" => "Ping pong 🏓",
         "Stars" => "5/5",
         "Description" => "I'm better then you, challange accepted? 🙊"
-      )    
+      ),
+      array(
+        "Id" => "1338",
+        "Language" => "Floor ball 🏒",
+        "Stars" => "5/5",
+        "Description" => "Pro."
+      )
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);

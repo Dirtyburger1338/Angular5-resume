@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-p {
+p, h1, .summary-click {
     font-family: "Open Sans";
 }
 
@@ -40,7 +40,7 @@ p {
     text-transform: uppercase;
     color: #169eb6;
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: Sans-serif;
 }
 
@@ -92,7 +92,7 @@ th.col-3, th.col-2 {
 .programmingDescriptionHeading {
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin: 0px 0px 20px 0px;
 }
 
 .programmingDescriptionBody {
@@ -103,81 +103,25 @@ th.col-3, th.col-2 {
     margin: 10px 0px 10px 0px;
 }
 
-table {
-    border-spacing: 1em;
-}
-
-@media screen and (min-width: 767px) and (max-width: 960px) {
-    .grid-right-outer {
-        float: initial;
-        margin: 0 auto;
-        width: 100%;
-        padding: 10px 0px 10px 0px;
-        background-color: orange;
-        display: none;
-    }
-    .clear-both {
-        clear: initial;
-    }
-    .grid-left-outer {
-        float: initial;
-        margin: 0 auto;
-        width: 100%;
-    }
-    .grid-right-inner {
-        padding-bottom: 100px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .grid-right-outer {
-        float: initial;
-        margin: 0 auto;
-        width: 100%;
-        padding: 10px 0px 10px 0px;
-        background-color: green;
-        display: none;
-    }
-    .clear-both {
-        clear: initial;
-    }
-    .grid-left-outer {
-        float: initial;
-        margin: 0 auto;
-        width: 100%;
-    }
-    .grid-right-inner {
-        padding-bottom: 100px;
-    }
+.summary-click {
+    display: none;
 }
 
 /* The Modal (background) */
-
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     padding-top: 100px;
-    /* Location of the box */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
 /* Modal Content */
-
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -193,7 +137,6 @@ table {
 }
 
 /* Add Animation */
-
 @-webkit-keyframes animatetop {
     from {
         top: -300px;
@@ -252,4 +195,64 @@ table {
 .modal-body > p {
     padding: 20px 0px 20px 0px;
     margin: 0;
+}
+
+@media screen and (min-width: 767px) and (max-width: 960px) {
+    .grid-right-outer {
+        float: initial;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        background-color: orange;
+        display: none;
+    }
+    .clear-both {
+        clear: initial;
+    }
+    .grid-left-outer {
+        float: initial;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .grid-right-inner {
+        padding-bottom: 100px;
+    }
+
+    .summary-click {
+        display: initial;
+    }
+
+    #programming-table {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .grid-right-outer {
+        float: initial;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px 0px 10px 0px;
+        background-color: green;
+        display: none;
+    }
+    .clear-both {
+        clear: initial;
+    }
+    .grid-left-outer {
+        float: initial;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .grid-right-inner {
+        padding-bottom: 100px;
+    }
+
+    .summary-click {
+        display: initial;
+    }
+
+    #programming-table {
+        margin-top: 20px;
+    }
 }

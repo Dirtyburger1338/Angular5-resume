@@ -1,20 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 p {
     font-family: "Open Sans";
 }
 
-#profile-picture {
-    border-radius: 50%;
-    width: 100%;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    width: 300px;
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .profile-picture-wrapper {
-    width: 100%;
+    width: 300px;
+}
+
+.about-content-wrapper {
+    margin: 0 auto;
+    /* background-color: green; */
+    width: 80%;
+    padding: 20px 20px 20px 20px;
+}
+
+.text-hello {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    display: inline-block;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    background-color: #e8676b;
+    font-family: "Open Sans";
+}
+
+.text-name {
+    font-size: 36px;
+    font-family: "Open Sans";
+}
+
+.about-profile {
+    padding-left: 30px;
+    /* background-color: red; */
+}
+
+.float-left {
+    float:left;
 }
 
 .center {
@@ -58,11 +87,11 @@ p {
     margin-top: 20px;
 }
 
-.footer > div > div > i {
+.footer>div>div>i {
     font-size: 50px;
 }
 
-.footer > div > div > p {
+.footer>div>div>p {
     margin-bottom: 20px;
 }
 

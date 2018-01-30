@@ -1,13 +1,23 @@
 <div class="container">
-    <div class="profile-picture-wrapper">
-        <div class="center">
-            <img id="profile-picture" [src]="profilePicture" class="profile-picture" />
+    <!-- <div class="profile-picture-wrapper"> -->
+    <!-- <div class="center"> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <div class="about-content-wrapper">
+        <div class="profile-picture-wrapper float-left">
+            <img id="profile-picture" [src]="profilePicture" class="img-responsive" />
         </div>
+        <div class="about-profile float-left">
+            <div class="text-hello">hello</div>
+            <div class="text-name">I'm {{ name }}</div>
+        </div>
+        <div class="clear-both"></div>
     </div>
-    <div class="profile-picture-text">
-        <p>{{ name }}</p>
-    </div>
+
+    <br/>
     <hr/>
+
     <div class="footer">
         <div class="footer-1">
             <div>
