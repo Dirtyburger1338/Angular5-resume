@@ -8,7 +8,7 @@
                         <th class="col-1"></th>
                         <th class="col-2">Language</th>
                         <th class="col-3">Personal rating</th>
-                        <tr *ngFor="let language of programmingLanguages" (click)="changeProgrammingDescription(language.Id)">
+                        <tr *ngFor="let language of programmingLanguages" (click)="changeProgrammingDescription(language.Id, this)">
                             <td class="col-1"></td>
                             <td class="col-2">{{ language.Language }}</td>
                             <td class="col-2" [innerHTML]="language.Stars | safeHtml"></td>
@@ -23,16 +23,37 @@
             </div>
         </div>
     </div>
-    <div class="grid-right-outer">
-        <div class="grid-right-inner">
-            <div *ngIf="programmingDescription.length > 0">
-                <h1 class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
-                <p [innerHTML]="programmingDescription[0].Description"></p>
-            </div>
-            <div *ngIf="programmingDescription.length === 0">
-                <p>&#9668; (Click)</p>
+    
+        <div class="grid-right-outer">
+            <div class="grid-right-inner">
+
+                <div *ngIf="programmingDescription.length > 0">
+                    <h1 [@descriptionHeader]="programmingDescription[0].Id" class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
+                    <p class="programmingDescriptionBody" [@descriptionBody]="programmingDescription[0].Id" [innerHTML]="programmingDescription[0].Description | safeHtml"></p>
+                </div>
+
+                <div *ngIf="programmingDescription.length === 0">
+                    <p>&#9668; (Click)</p>
+                </div>
             </div>
         </div>
-    </div>
+    
     <div class="clear-both"></div>
+
+
+    <div id="myModal" class="modal">
+        <div *ngIf="programmingDescription.length > 0">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" (click)="closeModal()">&times;</span>
+                    <h1 class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
+                </div>
+                <div class="modal-body">
+                    <p [innerHTML]="programmingDescription[0].Description"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

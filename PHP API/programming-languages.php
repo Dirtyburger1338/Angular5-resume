@@ -1,5 +1,5 @@
 <?php
-header("Content-Type: application/json;charset=ISO-8859-1");
+header("Content-Type: application/json;charset=utf-8");
 header('Access-Control-Allow-Origin: *');
 
 $arr = array(
@@ -7,7 +7,7 @@ $arr = array(
         "Id" => "1",
         "Language" => "C#",
         "Stars" => "3/5",
-        "Description" => "This is the primary language I currently use in my day to day work."
+        "Description" => "This is the primary language I currently use in my day to day work. Guess I know a thing or two 😊"
       ),
       array(
         "Id" => "2",
@@ -23,7 +23,7 @@ $arr = array(
       ),
       array(
         "Id" => "4",
-        "Language" => "Angular 1.x",
+        "Language" => "AngularJS 1.*",
         "Stars" => "1/5",
         "Description" => "I made a \"Magic mirror\" at home with this - google it."
       ),
@@ -31,7 +31,7 @@ $arr = array(
         "Id" => "5",
         "Language" => "Angular 2+",
         "Stars" => "1/5",
-        "Description" => "This page is built with Angular 5, but I have not build anything in production - yet.
+        "Description" => "This page is built with Angular 5, but I have not build anything in production - yet.<br/><br/>
         However, I'm intrested in building an application with Angular 5 as a front-end framework and with C# as \"Code behind\". Then with whatever API inbetween. "
       ),
       array(
@@ -44,7 +44,7 @@ $arr = array(
         "Id" => "7",
         "Language" => "CSS",
         "Stars" => "2/5",
-        "Description" => "I'm alright, I guess. Try this page out on different browsers and devices for instance."
+        "Description" => "I'm alright, I guess. Try this page out on different browser or devices for instance."
       ),
       array(
         "Id" => "8",
@@ -62,7 +62,7 @@ $arr = array(
         "Id" => "10",
         "Language" => "PHP",
         "Stars" => "1/5",
-        "Description" => "Serverside language. Used when I have an apache server e.g one.com hosting."
+        "Description" => "Serverside language. Used when I have an apache server e.g one.com hosting. Not alot though."
       ),
       array(
         "Id" => "11",
@@ -78,10 +78,10 @@ $arr = array(
       ),
       array(
         "Id" => "1337",
-        "Language" => "Ping pong racket 🏓",
+        "Language" => "Ping pong 🏓",
         "Stars" => "5/5",
         "Description" => "I'm better then you, challange accepted? 🙊"
-      )
+      )    
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);

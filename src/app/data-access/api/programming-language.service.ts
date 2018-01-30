@@ -69,7 +69,7 @@ export class ProgrammingLanguageService {
       }
 
       for (let i = 0; i < rhsLength - lhsLength; i++) {
-        rhsStarBuilder += '<span class="fa fa-star-o" style="color: #169eb6; font-size: 20px;"></span>';
+        rhsStarBuilder += '<span class="fa fa-star-o" style="color: black; font-size: 20px; opacity: 0.7;"></span>';
       }
 
       returnValue = lhsStarBuilder + rhsStarBuilder;
