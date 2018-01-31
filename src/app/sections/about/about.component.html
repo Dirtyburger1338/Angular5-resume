@@ -1,48 +1,32 @@
 <div class="container">
-    <!-- <div class="profile-picture-wrapper"> -->
-    <!-- <div class="center"> -->
-    <!-- </div> -->
-    <!-- </div> -->
-
     <div class="about-content-wrapper">
         <div class="profile-picture-wrapper float-left">
             <img id="profile-picture" [src]="profilePicture" class="img-responsive" />
         </div>
         <div class="about-profile float-left">
-            <div class="text-hello">hello</div>
-            <div class="text-name">I'm {{ name }}</div>
-        </div>
-        <div class="clear-both"></div>
-    </div>
-
-    <br/>
-    <hr/>
-
-    <div class="footer">
-        <div class="footer-1">
-            <div>
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            <div class="text-hello">hello  there</div>
+            <div class="text-name">
+                <h1>
+                    <span>I'm</span> {{ name }}
+                </h1>
+                <span class="occupation">{{ occupation }}</span>
             </div>
-        </div>
-        <div class="footer-2">
-            <div>
-                <i class="fa fa-envelope-square" aria-hidden="true"></i>
-                <p>{{email}}</p>
-            </div>
-        </div>
-        <div class="footer-3">
-            <div>
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            </div>
+            <hr />
+            <ul class="profile-list">
+                <li>
+                    <span class="title">Age</span>
+                    <span class="content">{{age}}</span>
+                </li>
+                <li>
+                    <span class="title">City</span>
+                    <span class="content">{{city}}</span>
+                </li>
+                <li>
+                    <span class="title">Employer</span>
+                    <span class="content">{{employer}}</span>
+                </li>
+            </ul>
         </div>
         <div class="clear-both"></div>
     </div>
 </div>
-
-<!-- <div *ngIf="goals">
-  <div class="container color-light" @goals style="min-height: 100px; background-color: orange;">
-    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)" style="min-height: 20px; background-color: green;">
-      {{ goal }}
-    </p>
-  </div>
-</div> -->

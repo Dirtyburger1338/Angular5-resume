@@ -49,7 +49,7 @@ $arr = array(
         "Id" => "8",
         "Language" => "JavaScript",
         "Stars" => "2/5",
-        "Description" => "<span style='background-color: black; opacity: 0.8; padding: 10px;'><span style='color: #169eb6;'>var</span> <span style='color: lightblue;'>omg</span> <span style='color: white;'>=<span> <span style='color: #db6923'>\"everything is a string language\"</span><span style='color: white;'>;</span> <span style='color: green;'>// *wink wink*</span></span>"
+        "Description" => "<span style='background-color: black; opacity: 0.8; padding: 10px;'><span style='color: #169eb6;'>var</span> <span style='color: lightblue;'>omg</span> <span style='color: white;'>=<span> <span style='color: #db6923'>\"everything is a string language\"</span><span style='color: white; padding-right: 10px;'>;</span> <span style='color: green;'></span></span> "
       ),
       array(
         "Id" => "9",
@@ -85,7 +85,7 @@ $arr = array(
         "Id" => "14",
         "Language" => "ASP.NET Web forms",
         "Stars" => "2/5",
-        "Description" => "Know a little here aswell. But I don't really like it."
+        "Description" => "Know a little here aswell. But I don't really like this kind of post-back shenanigans."
       ),
       array(
         "Id" => "15",
@@ -104,13 +104,7 @@ $arr = array(
         "Language" => "Ping pong 🏓",
         "Stars" => "5/5",
         "Description" => "I'm better then you, challange accepted? 🙊"
-      ),
-      array(
-        "Id" => "1338",
-        "Language" => "Floor ball 🏒",
-        "Stars" => "5/5",
-        "Description" => "Pro."
-      )
+      )  
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);

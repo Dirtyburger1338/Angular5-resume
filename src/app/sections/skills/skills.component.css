@@ -93,10 +93,14 @@ th.col-3, th.col-2 {
     font-weight: bold;
     font-size: 20px;
     margin: 0px 0px 20px 0px;
+    opacity: .9;
 }
 
 .programmingDescriptionBody {
     font-family: monospace;
+    font-size: 18px;
+    display: inline-block;
+    opacity: .9;
 }
 
 #programming-table>tbody>tr>td {
