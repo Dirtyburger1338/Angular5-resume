@@ -1,24 +1,8 @@
-/* #divider {
-    margin: 30px 0px 30px 0px;
-    width: 110%;
-    background-repeat: repeat-x;
-    display: inline-block;
-    height: 150px;
-     transform: rotate(-2deg); 
-    overflow: visible;
-}
-
-h1 {
-    font-size: 40px;
-    font-family: monospace;
-    font-style: italic;
-} */
-
 .container {
     margin: 10px 0px 10px 0px;
     background-color: white;
     margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 30px auto;
     max-width: 1100px;
 }
 

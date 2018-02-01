@@ -61,7 +61,7 @@ nav ul li a:hover {
   color: #1dd0f0;
 }
 
-li > .link-active {
+li>.link-active {
   margin: 0px;
 }
 
