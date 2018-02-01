@@ -1,10 +1,62 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
+  animations: [
+
+    trigger('name', [
+      transition('* => *', [
+        animate('.2s ease-in', keyframes([
+          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
+        ]))
+      ])
+    ]),
+
+    trigger('occupation', [
+      transition('* => *', [
+        animate('.4s ease-in', keyframes([
+          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
+        ]))
+      ])
+    ]),
+
+    trigger('aboutAge', [
+      transition('* => *', [
+        animate('.6s ease-in', keyframes([
+          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateY(0)', offset: 0.5 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
+        ]))
+      ])
+    ]),
+
+    trigger('aboutCity', [
+      transition('* => *', [
+        animate('.6s ease-in', keyframes([
+          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.5 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
+        ]))
+      ])
+    ]),
+
+    trigger('aboutEmployer', [
+      transition('* => *', [
+        animate('.6s ease-in', keyframes([
+          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateY(100px)', offset: 0.5 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
+        ]))
+      ])
+    ])
+
+  ]
 })
 export class AboutComponent implements OnInit, AfterViewInit {
 

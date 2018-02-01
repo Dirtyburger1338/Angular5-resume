@@ -6,3 +6,23 @@
     padding: 20px;
     font-family: monospace;
 }
+
+.padding {
+    padding-top: 130px;
+}
+
+.container>h1 {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .padding {
+        padding-top: 100px;
+    }
+}

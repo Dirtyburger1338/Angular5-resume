@@ -7,6 +7,7 @@ nav {
   max-width: 100%;
   margin: 0 auto;
   display: block;
+  margin-bottom: 30px;
 }
 
 li>i {
@@ -25,6 +26,14 @@ nav>ul>li {
   width: 25%;
   background-color: white;
   margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding-right: 1px;
+  box-sizing: border-box;
+}
+
+nav>ul>li:first {
+  border-left: 1px solid lightgray;
 }
 
 nav>ul>li>a {
@@ -52,6 +61,10 @@ nav ul li a:hover {
   color: #1dd0f0;
 }
 
+li > .link-active {
+  margin: 0px;
+}
+
 nav>ul>li>a>p {
   margin-top: 10px;
 }
@@ -64,16 +77,21 @@ nav>ul>li>a>p {
   overflow: hidden;
 }
 
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
 .navbarfixed>ul>li {
   height: 65px;
   overflow: hidden;
-  transition: height 2s;
+  transition: height .3s;
 }
 
 .navbar>ul>li {
   height: 100px;
   overflow: hidden;
-  transition: height 2s;
+  transition: height .3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -83,8 +101,7 @@ nav>ul>li>a>p {
   .navbarfixed>ul>li>a>p, .navbar>ul>li>a>p {
     display: none;
   }
-
   .navbar>ul>li>a, .navbar>ul>li {
     height: 80px;
-  } 
+  }
 }

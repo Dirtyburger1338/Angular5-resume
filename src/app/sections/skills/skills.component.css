@@ -4,6 +4,10 @@ p, h1, .summary-click {
     font-family: "Open Sans";
 }
 
+.padding {
+    padding-top: 130px;
+}
+
 .container {
     background-color: white;
     margin-top: 0;
@@ -264,5 +268,9 @@ th.col-3, th.col-2 {
 
     #programming-table {
         margin-top: 20px;
+    }
+
+    .padding {
+        padding-top: 100px;
     }
 }

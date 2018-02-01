@@ -1,27 +1,28 @@
+<div class="padding"></div>
 <div class="container">
     <div class="about-content-wrapper">
         <div class="profile-picture-wrapper float-left">
             <img id="profile-picture" [src]="profilePicture" class="img-responsive" />
         </div>
         <div class="about-profile float-left">
-            <div class="text-hello">hello  there</div>
-            <div class="text-name">
-                <h1>
+            <div class="text-hello">hello there</div>
+            <div class="text-name" >
+                <h1 @name>
                     <span>I'm</span> {{ name }}
                 </h1>
-                <span class="occupation">{{ occupation }}</span>
+                <span class="occupation" @occupation>{{ occupation }}</span>
             </div>
             <hr />
             <ul class="profile-list">
-                <li>
+                <li @aboutAge>
                     <span class="title">Age</span>
                     <span class="content">{{age}}</span>
                 </li>
-                <li>
+                <li @aboutCity>
                     <span class="title">City</span>
                     <span class="content">{{city}}</span>
                 </li>
-                <li>
+                <li @aboutEmployer>
                     <span class="title">Employer</span>
                     <span class="content">{{employer}}</span>
                 </li>

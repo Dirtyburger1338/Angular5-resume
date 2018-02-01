@@ -5,6 +5,10 @@ p {
     font-family: "Open Sans";
 }
 
+.padding {
+    padding-top: 130px;
+}
+
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -155,6 +159,10 @@ p {
         padding: 20px 0px 20px 0px;
         margin: 0 auto;
         width: 100%;
+    }
+
+    .padding {
+        padding-top: 100px;
     }
 
     .text-name>h1 {
