@@ -33,7 +33,7 @@
                 <div class="programmingDescriptionBody" [@descriptionBody]="programmingDescription[0].Id" [innerHTML]="programmingDescription[0].Description | safeHtml"></div>
             </div>
 
-            <div *ngIf="programmingDescription.length === 0">
+            <div class="placeholder" *ngIf="programmingLanguages && programmingDescription.length === 0">
                 <p>&#9668; (Click)</p>
             </div>
         </div>
@@ -58,3 +58,16 @@
         </div>
     </div>
 </div>
+
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>
+<app-divider></app-divider>

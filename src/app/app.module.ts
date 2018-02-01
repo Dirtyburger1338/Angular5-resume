@@ -15,6 +15,7 @@ import { SafeHtmlPipe } from './safe-html.pipe';
 
 import { ProgrammingLanguageService } from './data-access/api/programming-language.service';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { DividerComponent } from './sections/skills/divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
     SkillsComponent,
     NavBarComponent,
     SafeHtmlPipe,
-    SpinnerComponent
+    SpinnerComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,

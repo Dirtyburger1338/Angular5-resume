@@ -61,7 +61,7 @@ $arr = array(
         "Id" => "10",
         "Language" => "PHP",
         "Stars" => "1/5",
-        "Description" => "Used when I have an apache server e.g one.com hosting. Don't know alot though."
+        "Description" => "Used when I have an apache server, e.g one.com hosting. Don't know alot though, but propably enough."
       ),
       array(
         "Id" => "11",
@@ -91,13 +91,19 @@ $arr = array(
         "Id" => "15",
         "Language" => "EpiServer 6 (CMS)",
         "Stars" => "1/5",
-        "Description" => "Define page, display properties. Pretty much. I know there is more too it of course."
+        "Description" => "Define page, display properties. Pretty much. <br/><br/>How silly of me, I know there is more too it of course."
       ),
       array(
         "Id" => "16",
         "Language" => "Python",
         "Stars" => "1/5",
         "Description" => "A tiny bit. Might be more in the near future (machine learning)."
+      ),
+      array(
+        "Id" => "17",
+        "Language" => "Internet Information Service (IIS)",
+        "Stars" => "1/5",
+        "Description" => "I'm using IIS for hosting webservices and webpages at work. <br/><br/>The full Microsoft stack as you have guessed by now."
       ),
       array(
         "Id" => "1337",

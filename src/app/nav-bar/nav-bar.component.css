@@ -6,8 +6,6 @@
 nav {
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
   display: block;
 }
 
@@ -20,7 +18,7 @@ nav ul {
   background-color: white;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: block;
   float: left;
   transition: all 0.3s ease-in;
@@ -46,11 +44,11 @@ nav ul li a:hover {
   color: white;
 }
 
-.link-active > a {
+.link-active>a {
   background-color: rgba(51, 51, 51, 0.85);
 }
 
-.link-active > a > i, .link-active > a > p {
+.link-active>a>i, .link-active>a>p {
   color: #1dd0f0;
 }
 
@@ -58,8 +56,35 @@ nav>ul>li>a>p {
   margin-top: 10px;
 }
 
+.navbarfixed {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.navbarfixed>ul>li {
+  height: 65px;
+  overflow: hidden;
+  transition: height 2s;
+}
+
+.navbar>ul>li {
+  height: 100px;
+  overflow: hidden;
+  transition: height 2s;
+}
+
 @media screen and (max-width: 768px) {
   nav>ul>li>a>p {
     display: none;
   }
+  .navbarfixed>ul>li>a>p, .navbar>ul>li>a>p {
+    display: none;
+  }
+
+  .navbar>ul>li>a, .navbar>ul>li {
+    height: 80px;
+  } 
 }
