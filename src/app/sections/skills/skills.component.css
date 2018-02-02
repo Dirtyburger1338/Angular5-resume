@@ -13,6 +13,8 @@ p, h1, .summary-click {
     margin-top: 0;
     margin: 0 auto;
     max-width: 1100px;
+    box-shadow: 4px 4px 10px black;
+    border: 1px solid black;
 }
 
 .grid-left-outer {
