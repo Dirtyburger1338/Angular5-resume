@@ -34,8 +34,8 @@
                 <div class="programmingDescriptionBody" [@descriptionBody]="programmingDescription[0].Id" [innerHTML]="programmingDescription[0].Description | safeHtml"></div>
             </div>
 
-            <div class="placeholder" *ngIf="programmingLanguages && programmingDescription.length === 0">
-                <p>&#9668; (Click)</p>
+            <div class="placeholder" *ngIf="programmingDescription.length === 0 && programmingLanguages.length !== 0">
+                <p class="blink" style="float:left;">&#9668;</p><p style="float:left;">&nbsp;&nbsp;&nbsp;(Click)</p>
             </div>
         </div>
     </div>

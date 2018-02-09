@@ -12,13 +12,67 @@
     padding-top: 130px;
 }
 
+hr {
+    margin: 0px;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container>h1 {
     font-size: 20px;
     padding: 20px;
 }
 
-.inner-content {
+.lhs, .rhs {
     padding: 20px;
+    float: left;
+}
+
+.list-item {
+    margin-top: 50px;
+}
+
+.list-item:first-child {
+    margin-top: 0px;
+}
+
+.lhs {
+    width: 20%;
+}
+
+.rhs {
+    width: 70%;
+}
+
+.education-heading {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: .8;
+    margin-bottom: 20px;
+}
+
+.short-description {
+    margin-bottom: 10px;
+}
+
+.timeline {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: .8;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.education-item-wrapper {
+    clear: left;
 }
 
 @media screen and (max-width: 1100px) {

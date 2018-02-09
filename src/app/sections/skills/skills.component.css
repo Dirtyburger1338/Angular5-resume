@@ -213,6 +213,25 @@ th.col-3, th.col-2 {
     opacity: .9;
 }
 
+.placeholder>p{
+    
+}
+
+.blink {
+    animation: blink-animation 1.5s steps(50, start) infinite;
+  }
+  @keyframes blink-animation {
+    0% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+  }
+
 @media screen and (min-width: 767px) and (max-width: 960px) {
     .grid-right-outer {
         float: initial;

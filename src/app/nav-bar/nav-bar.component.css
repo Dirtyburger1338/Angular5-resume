@@ -8,6 +8,13 @@ nav {
   margin: 0 auto;
   display: block;
   margin-bottom: 30px;
+  color: black;
+  box-shadow: 0px 5px 15px black;
+  height: 100px;
+}
+
+nav::after {
+  clear: both;
 }
 
 li>i {
@@ -94,6 +101,18 @@ nav>ul>li>a>p {
   transition: height .3s;
 }
 
+nav.navbarfixed {
+  height: 65px;
+  overflow: hidden;
+  transition: height .3s;
+}
+
+nav.navbar {
+  height: 100px;
+  overflow: hidden;
+  transition: height .3s;
+}
+
 @media screen and (max-width: 768px) {
   nav>ul>li>a>p {
     display: none;
@@ -103,5 +122,16 @@ nav>ul>li>a>p {
   }
   .navbar>ul>li>a, .navbar>ul>li {
     height: 80px;
+    transition: height .3s;
+  }
+  nav.navbar {
+    height: 80px;
+    overflow: hidden;
+    transition: height .3s;
+  }
+  nav.navbarfixed {
+    height: 65px;
+    overflow: hidden;
+    transition: height .3s;
   }
 }

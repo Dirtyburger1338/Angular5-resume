@@ -40,7 +40,7 @@ import { SafeHtmlPipe } from '../../safe-html.pipe';
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
-    ])
+    ]),
 
   ]
 })

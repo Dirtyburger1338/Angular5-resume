@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 $arr = array(
       array(
         "Id" => "1",
-        "Language" => "C#",
+        "Language" => "C# (C-sharp)",
         "Stars" => "3/5",
         "Description" => "This is the primary language I currently use in my day to day work. Guess I know a thing or two here 😊"
       ),
@@ -71,14 +71,14 @@ $arr = array(
       ),
       array(
         "Id" => "12",
-        "Language" => "T-SQL",
+        "Language" => "MS T-SQL",
         "Stars" => "2/5",
         "Description" => "This is the other part of my day to day work. Stored prosedures mostly."
       ),
       array(
         "Id" => "13",
         "Language" => "ASP.NET MVC",
-        "Stars" => "2/5",
+        "Stars" => "1/5",
         "Description" => "Guess I can make some magic happen here, have not used in production yet though."
       ),
       array(
@@ -103,7 +103,7 @@ $arr = array(
         "Id" => "17",
         "Language" => "Internet Information Service (IIS)",
         "Stars" => "1/5",
-        "Description" => "I'm using IIS for hosting webservices and webpages at work. <br/><br/>The full Microsoft stack as you have guessed by now."
+        "Description" => "I'm using IIS for hosting webservices and websites at work. <br/><br/>The full Microsoft stack as you have guessed by now."
       ),
       array(
         "Id" => "1337",
