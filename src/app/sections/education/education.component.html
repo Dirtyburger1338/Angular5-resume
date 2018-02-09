@@ -1,6 +1,6 @@
 <div class="padding"></div>
 <div class="container">
-    <h1>Degrees</h1>
+    <h1 (click)="derp()">Degrees</h1>
     <hr/>
     <div class="inner-content">
 
@@ -24,6 +24,11 @@
                 <div class="clear-both"></div>
             </li>
         </ul>
+        <div class="spinner-outer-wrapper" *ngIf="Educations.length === 0">
+            <div class="spinner-wrapper-aside">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
         <div class="clear-both"></div>
     </div>
 </div>

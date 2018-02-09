@@ -10,6 +10,7 @@ import { EducationService } from '../../data-access/api/education.service';
 export class EducationComponent implements OnInit {
 
   Educations: Education[] = [];
+  counter = 0;
 
   constructor(private _daoEdu: EducationService) { }
 
@@ -22,4 +23,8 @@ export class EducationComponent implements OnInit {
     return this.Educations;
   }
 
+  derp() {
+    this.counter += 1;
+    console.log(this.counter);
+  }
 }
