@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 p, h1, .summary-click {
     font-family: "Open Sans";
 }
@@ -118,6 +117,7 @@ th.col-3, th.col-2 {
 }
 
 /* The Modal (background) */
+
 .modal {
     display: none;
     position: fixed;
@@ -132,6 +132,7 @@ th.col-3, th.col-2 {
 }
 
 /* Modal Content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -147,6 +148,7 @@ th.col-3, th.col-2 {
 }
 
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
     from {
         top: -300px;
@@ -170,6 +172,7 @@ th.col-3, th.col-2 {
 }
 
 /* The Close Button */
+
 .close {
     color: white;
     float: right;
@@ -198,11 +201,11 @@ th.col-3, th.col-2 {
     margin: 0;
 }
 
-.modal-body > div {
+.modal-body>div {
     margin-top: 20px;
 }
 
-.modal-body > p {
+.modal-body>p {
     padding: 20px 0px 20px 0px;
     margin: 0;
 }
@@ -213,14 +216,15 @@ th.col-3, th.col-2 {
     opacity: .9;
 }
 
-.placeholder>p{
-    
+.spinner-outer-wrapper {
+    padding: 20px;
 }
 
 .blink {
     animation: blink-animation 1.5s steps(50, start) infinite;
-  }
-  @keyframes blink-animation {
+}
+
+@keyframes blink-animation {
     0% {
         transform: translateX(10px);
     }
@@ -230,7 +234,7 @@ th.col-3, th.col-2 {
     100% {
         transform: translateX(10px);
     }
-  }
+}
 
 @media screen and (min-width: 767px) and (max-width: 960px) {
     .grid-right-outer {
@@ -252,11 +256,9 @@ th.col-3, th.col-2 {
     .grid-right-inner {
         padding-bottom: 100px;
     }
-
     .summary-click {
         display: initial;
     }
-
     #programming-table {
         margin-top: 20px;
     }
@@ -282,15 +284,12 @@ th.col-3, th.col-2 {
     .grid-right-inner {
         padding-bottom: 100px;
     }
-
     .summary-click {
         display: initial;
     }
-
     #programming-table {
         margin-top: 20px;
     }
-
     .padding {
         padding-top: 100px;
     }
