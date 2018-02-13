@@ -10,7 +10,17 @@ $arr = array(
         "To" => "2016",
         "Heading" => "Bachelor of Science in Computer Enineering",
         "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
-        "Image" => "miun_logo.png"
+        "Image" => "miun_logo.png",
+        "Introduction" => "Intro",
+        "List" => array(
+            "Programming",
+            "Mathematics",
+            "Computer Science",
+            "Theory",
+            "Algorithms and datastructurs",
+            "Other"
+        ),
+        "Link" => "https://www.miun.se/utbildning/program/data-och-it/datateknik/utbildningsplan/?utbildningsplanid=1069"
       ),
       array(
         "Id" => "2",
@@ -19,7 +29,16 @@ $arr = array(
         "To" => "2006",
         "Heading" => "Natural Science - alignment to Mathematics and Computers",
         "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
-        "Image" => "sg.png"
+        "Image" => "sg.png",
+        "Introduction" => "Intro",
+        "List" => array(
+            // "Bajs1",
+            // "Bajs2",
+            // "Bajs3",
+            // "Bajs4",
+            // "Bajs5",
+        ),
+        "Link" => "https://gymnasium.sundsvall.se/program/naturvetenskapsprogrammet/"
       )
 );
 

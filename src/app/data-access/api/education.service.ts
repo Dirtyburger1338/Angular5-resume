@@ -29,7 +29,10 @@ export class EducationService {
             response[i].To,
             response[i].Heading,
             response[i].Context,
-            'assets/images/' + response[i].Image
+            'assets/images/' + response[i].Image,
+            response[i].Introduction,
+            response[i].List,
+            response[i].Link
           );
 
           this.content.push(tmp);

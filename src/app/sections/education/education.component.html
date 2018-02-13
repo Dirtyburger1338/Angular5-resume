@@ -1,6 +1,6 @@
 <div class="padding"></div>
 <div class="container">
-    <h1 (click)="derp()">Degrees</h1>
+    <h1>Degrees</h1>
     <hr/>
     <div class="inner-content">
 
@@ -18,7 +18,15 @@
                     </div>
                     <div class="rhs">
                         <h2 class="education-heading"> {{education.Heading}} </h2>
-                        <p> {{education.Context}} </p>
+                        <p class="education-main-text"> {{education.Context}} </p>
+                        <ul>
+                            <div *ngIf="education.List">
+                                <li class="sublist-item" *ngFor="let listItem of education.List">
+                                    {{ listItem }}
+                                </li>
+                            </div>
+                        </ul>
+                        <a class="link-to-education" href="{{education.Link}}" target="_blank">Link to education</a>
                     </div>
                 </div>
                 <div class="clear-both"></div>
