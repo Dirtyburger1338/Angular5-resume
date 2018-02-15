@@ -15,6 +15,8 @@ import { SafeHtmlPipe } from './safe-html.pipe';
 
 import { ProgrammingLanguageService } from './data-access/api/programming-language.service';
 import { EducationService } from './data-access/api/education.service';
+import { CoursesService } from './data-access/api/courses.service';
+
 import { SpinnerComponent } from './spinner/spinner.component';
 import { DividerComponent } from './sections/skills/divider/divider.component';
 
@@ -37,7 +39,7 @@ import { DividerComponent } from './sections/skills/divider/divider.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProgrammingLanguageService, EducationService],
+  providers: [ProgrammingLanguageService, EducationService, CoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

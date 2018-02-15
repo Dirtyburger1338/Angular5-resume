@@ -32,11 +32,6 @@ $arr = array(
         "Image" => "sg.png",
         "Introduction" => "Intro",
         "List" => array(
-            // "Bajs1",
-            // "Bajs2",
-            // "Bajs3",
-            // "Bajs4",
-            // "Bajs5",
         ),
         "Link" => "https://gymnasium.sundsvall.se/program/naturvetenskapsprogrammet/"
       )

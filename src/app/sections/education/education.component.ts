@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Education } from '../../classes/Education';
+import { Courses } from '../../classes/Courses';
+
 import { EducationService } from '../../data-access/api/education.service';
+import { CoursesService } from '../../data-access/api/courses.service';
 
 @Component({
   selector: 'app-education',
@@ -10,21 +14,22 @@ import { EducationService } from '../../data-access/api/education.service';
 export class EducationComponent implements OnInit {
 
   Educations: Education[] = [];
+  Courses: Courses[] = [];
   counter = 0;
 
-  constructor(private _daoEdu: EducationService) { }
+  constructor(private _daoEdu: EducationService, private _daoCourses: CoursesService) { }
 
   ngOnInit() {
-    this.Educations = this.getEducations();
+    this.getEducations();
+    this.getCourses();
   }
 
-  getEducations(): Education[] {
+  getEducations() {
     this.Educations = this._daoEdu.getEducations();
-    return this.Educations;
   }
 
-  derp() {
-    this.counter += 1;
-    console.log(this.counter);
+  getCourses() {
+    this.Courses = this._daoCourses.getCourses();
   }
+
 }
