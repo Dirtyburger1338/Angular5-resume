@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 $arr = array(
       array(
         "Id" => "1",
-        "Language" => "C# (C-sharp)",
+        "Language" => "C#",
         "Stars" => "3/5",
         "Description" => "This is the primary language I currently use in my day to day work. Guess I know a thing or two here 😊"
       ),

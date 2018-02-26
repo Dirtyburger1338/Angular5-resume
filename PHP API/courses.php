@@ -28,7 +28,7 @@ $arr = array(
       ),
       array(
         "Id" => "2",
-        "ShortDescription" => "IBM Training",
+        "ShortDescription" => "IBM BPM",
         "From" => "2016-09-12",
         "To" => "5 days",
         "Heading" => "Developing Applications in IBM Business Process Manager Advanced V8.5.5 - I",
@@ -41,7 +41,7 @@ $arr = array(
       ),
       array(
         "Id" => "3",
-        "ShortDescription" => "IBM Training",
+        "ShortDescription" => "IBM BPM",
         "From" => "2016-08-22",
         "To" => "5 days",
         "Heading" => "Process Implementing with IBM Business Process Manager Standard-Adv - V8.5.6, I - II",
