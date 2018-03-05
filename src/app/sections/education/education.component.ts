@@ -14,22 +14,28 @@ import { CoursesService } from '../../data-access/api/courses.service';
 export class EducationComponent implements OnInit {
 
   Educations: Education[] = [];
-  Courses: Courses[] = [];
+  WorkCourses: Courses[] = [];
+  UniversityCourses: Courses[] = [];
   counter = 0;
 
   constructor(private _daoEdu: EducationService, private _daoCourses: CoursesService) { }
 
   ngOnInit() {
     this.getEducations();
-    this.getCourses();
+    this.getWorkCourses();
+    this.getUniversityCourses();
   }
 
   getEducations() {
     this.Educations = this._daoEdu.getEducations();
   }
 
-  getCourses() {
-    this.Courses = this._daoCourses.getCourses();
+  getWorkCourses() {
+    this.WorkCourses = this._daoCourses.getWorkCourses();
+  }
+
+  getUniversityCourses() {
+    this.UniversityCourses = this._daoCourses.getUniversityCourses();
   }
 
 }

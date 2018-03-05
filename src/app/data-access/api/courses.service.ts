@@ -7,18 +7,20 @@ import { Courses } from '../../classes/Courses';
 @Injectable()
 export class CoursesService {
 
-  apiProgrammingUrl = 'http://localhost:4201/courses.php';
-  content: Courses[] = [];
+  apiCorsesWorkUrl = 'http://localhost:4201/courses_work.php';
+  apiCorsesUniversityUrl = 'http://localhost:4201/courses_university.php';
+  workContent: Courses[] = [];
+  universityContent: Courses[] = [];
 
   constructor(private http: HttpClient, sanitizer: DomSanitizer) { }
 
-  public getCourses(): Courses[] {
+  public getWorkCourses(): Courses[] {
     try {
-      if (this.content.length > 0) {
-        return this.content;
+      if (this.workContent.length > 0) {
+        return this.workContent;
       }
 
-      this.http.get<Courses[]>(this.apiProgrammingUrl).subscribe(response => {
+      this.http.get<Courses[]>(this.apiCorsesWorkUrl).subscribe(response => {
 
         for (let i = 0; i < response.length; i++) {
 
@@ -35,12 +37,47 @@ export class CoursesService {
             response[i].Link
           );
 
-          this.content.push(tmp);
+          this.workContent.push(tmp);
         }
 
       });
 
-      return this.content;
+      return this.workContent;
+    } catch (e) {
+      console.log(e);
+    }
+    finally { }
+  }
+
+  public getUniversityCourses(): Courses[] {
+    try {
+      if (this.universityContent.length > 0) {
+        return this.universityContent;
+      }
+
+      this.http.get<Courses[]>(this.apiCorsesUniversityUrl).subscribe(response => {
+
+        for (let i = 0; i < response.length; i++) {
+
+          const tmp = new Courses(
+            response[i].Id,
+            response[i].ShortDescription,
+            response[i].From,
+            response[i].To,
+            response[i].Heading,
+            response[i].Context,
+            'assets/images/' + response[i].Image,
+            response[i].Introduction,
+            response[i].List,
+            response[i].Link
+          );
+
+          this.universityContent.push(tmp);
+        }
+
+      });
+
+      return this.universityContent;
     } catch (e) {
       console.log(e);
     }

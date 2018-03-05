@@ -27,7 +27,7 @@
                             </div>
                         </ul>
                         <div class="link-to-education-wrapper">
-                            <a class="link-to-education" href="{{education.Link}}" target="_blank">Link to education</a>
+                            <a class="link-to-education" href="{{education.Link}}" target="_blank">Link</a>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@
 
 <div class="dividor"></div>
 
-<!-- Courses -->
+<!-- Separate courses through university -->
 <div class="container">
-    <h1>Courses</h1>
+    <h1>Separate courses through university</h1>
     <hr/>
     <div class="courses-inner-content">
-        <ul *ngIf="Courses">
-            <li *ngFor="let cours of Courses" class="list-item">
+        <ul *ngIf="UniversityCourses">
+            <li *ngFor="let cours of UniversityCourses" class="list-item">
                 <div class="education-item-wrapper">
                     <div class="lhs">
                         <div class="education-img-wrapper">
@@ -73,14 +73,14 @@
                             </div>
                         </ul>
                         <div class="link-to-education-wrapper">
-                            <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link to education</a>
+                            <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                         </div>
                     </div>
                 </div>
                 <div class="clear-both"></div>
             </li>
         </ul>
-        <div class="spinner-outer-wrapper" *ngIf="Courses.length === 0">
+        <div class="spinner-outer-wrapper" *ngIf="UniversityCourses.length === 0">
             <div class="spinner-wrapper-aside">
                 <app-spinner></app-spinner>
             </div>
@@ -88,3 +88,50 @@
         <div class="clear-both"></div>
     </div>
 </div>
+
+<div class="dividor"></div>
+
+<!-- Courses through woork -->
+<div class="container">
+    <h1>Courses through woork</h1>
+    <hr/>
+    <div class="courses-inner-content">
+        <ul *ngIf="WorkCourses">
+            <li *ngFor="let cours of WorkCourses" class="list-item">
+                <div class="education-item-wrapper">
+                    <div class="lhs">
+                        <div class="education-img-wrapper">
+                            <img class="img-responsive" [src]="cours.Image" />
+                        </div>
+                        <div class="timeline">
+                            <p class="short-description">{{cours.ShortDescription}}</p>
+                            <p>{{cours.From}} - {{cours.To}}</p>
+                        </div>
+                    </div>
+                    <div class="rhs">
+                        <h2 class="education-heading"> {{cours.Heading}} </h2>
+                        <p class="education-main-text"> {{cours.Context}} </p>
+                        <ul>
+                            <div *ngIf="cours.List">
+                                <li class="sublist-item" *ngFor="let listItem of cours.List">
+                                    {{ listItem }}
+                                </li>
+                            </div>
+                        </ul>
+                        <div class="link-to-education-wrapper">
+                            <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear-both"></div>
+            </li>
+        </ul>
+        <div class="spinner-outer-wrapper" *ngIf="WorkCourses.length === 0">
+            <div class="spinner-wrapper-aside">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
+        <div class="clear-both"></div>
+    </div>
+</div>
+<div class="dividor"></div>

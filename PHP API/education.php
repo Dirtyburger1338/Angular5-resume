@@ -8,14 +8,13 @@ $arr = array(
         "ShortDescription" => "University",
         "From" => "2013",
         "To" => "2016",
-        "Heading" => "Bachelor of Science in Computer Enineering",
+        "Heading" => "Degree of Bachelor of Science with a major in Computer Enineering",
         "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
         "Image" => "miun_logo.png",
         "Introduction" => "Intro",
         "List" => array(
             "Programming",
             "Mathematics",
-            "Computer Science",
             "Theory",
             "Algorithms and datastructurs",
             "Other"
