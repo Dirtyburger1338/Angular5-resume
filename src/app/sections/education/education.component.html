@@ -1,8 +1,11 @@
 <div class="padding"></div>
+<div class="dividor"></div>
 <!-- Degrees -->
+
 <div class="container">
-    <h1>Degrees</h1>
-    <hr/>
+    <div class="section-heading-wrapper">
+        <h1 class="section-heading">Degrees</h1>
+    </div>
     <div class="degrees-inner-content">
         <ul *ngIf="Educations">
             <li *ngFor="let education of Educations" class="list-item">
@@ -17,17 +20,19 @@
                         </div>
                     </div>
                     <div class="rhs">
-                        <h2 class="education-heading"> {{education.Heading}} </h2>
-                        <p class="education-main-text"> {{education.Context}} </p>
-                        <ul>
-                            <div *ngIf="education.List">
-                                <li class="sublist-item" *ngFor="let listItem of education.List">
-                                    {{ listItem }}
-                                </li>
+                        <div class="rhs-content-wrapper">
+                            <h2 class="education-heading"> {{education.Heading}} </h2>
+                            <p class="education-main-text"> {{education.Context}} </p>
+                            <ul>
+                                <div *ngIf="education.List">
+                                    <li class="sublist-item" *ngFor="let listItem of education.List">
+                                        {{ listItem }}
+                                    </li>
+                                </div>
+                            </ul>
+                            <div class="link-to-education-wrapper">
+                                <a class="link-to-education" href="{{education.Link}}" target="_blank">Link</a>
                             </div>
-                        </ul>
-                        <div class="link-to-education-wrapper">
-                            <a class="link-to-education" href="{{education.Link}}" target="_blank">Link</a>
                         </div>
                     </div>
                 </div>
@@ -45,10 +50,11 @@
 
 <div class="dividor"></div>
 
-<!-- Separate courses through university -->
+<!-- Courses through university -->
 <div class="container">
-    <h1>Separate courses through university</h1>
-    <hr/>
+    <div class="section-heading-wrapper">
+        <h1 class="section-heading">Courses through university</h1>
+    </div>
     <div class="courses-inner-content">
         <ul *ngIf="UniversityCourses">
             <li *ngFor="let cours of UniversityCourses" class="list-item">
@@ -63,17 +69,19 @@
                         </div>
                     </div>
                     <div class="rhs">
-                        <h2 class="education-heading"> {{cours.Heading}} </h2>
-                        <p class="education-main-text"> {{cours.Context}} </p>
-                        <ul>
-                            <div *ngIf="cours.List">
-                                <li class="sublist-item" *ngFor="let listItem of cours.List">
-                                    {{ listItem }}
-                                </li>
+                        <div class="rhs-content-wrapper">
+                            <h2 class="education-heading"> {{cours.Heading}} </h2>
+                            <p class="education-main-text"> {{cours.Context}} </p>
+                            <ul>
+                                <div *ngIf="cours.List">
+                                    <li class="sublist-item" *ngFor="let listItem of cours.List">
+                                        {{ listItem }}
+                                    </li>
+                                </div>
+                            </ul>
+                            <div class="link-to-education-wrapper">
+                                <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                             </div>
-                        </ul>
-                        <div class="link-to-education-wrapper">
-                            <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                         </div>
                     </div>
                 </div>
@@ -93,8 +101,9 @@
 
 <!-- Courses through woork -->
 <div class="container">
-    <h1>Courses through woork</h1>
-    <hr/>
+    <div class="section-heading-wrapper">
+        <h1 class="section-heading">Courses through work</h1>
+    </div>
     <div class="courses-inner-content">
         <ul *ngIf="WorkCourses">
             <li *ngFor="let cours of WorkCourses" class="list-item">
@@ -109,17 +118,19 @@
                         </div>
                     </div>
                     <div class="rhs">
-                        <h2 class="education-heading"> {{cours.Heading}} </h2>
-                        <p class="education-main-text"> {{cours.Context}} </p>
-                        <ul>
-                            <div *ngIf="cours.List">
-                                <li class="sublist-item" *ngFor="let listItem of cours.List">
-                                    {{ listItem }}
-                                </li>
+                        <div class="rhs-content-wrapper">
+                            <h2 class="education-heading"> {{cours.Heading}} </h2>
+                            <p class="education-main-text"> {{cours.Context}} </p>
+                            <ul>
+                                <div *ngIf="cours.List">
+                                    <li class="sublist-item" *ngFor="let listItem of cours.List">
+                                        {{ listItem }}
+                                    </li>
+                                </div>
+                            </ul>
+                            <div class="link-to-education-wrapper">
+                                <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                             </div>
-                        </ul>
-                        <div class="link-to-education-wrapper">
-                            <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                         </div>
                     </div>
                 </div>

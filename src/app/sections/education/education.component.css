@@ -6,6 +6,7 @@
     font-family: monospace;
     box-shadow: 4px 4px 10px black;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .padding {
@@ -50,9 +51,9 @@ hr {
 
 .education-heading {
     font-size: 21px;
-    font-weight: bold;
-    opacity: .8;
-    margin-bottom: 20px;
+    /* font-weight: bold; */
+    /* opacity: .8; */
+    margin-bottom: 10px;
 }
 
 .short-description {
@@ -67,8 +68,8 @@ hr {
     opacity: .8;
 }
 
-.timeline > p:last-child {
-    font-size: 17px;   
+.timeline>p:last-child {
+    font-size: 17px;
 }
 
 .clear-both {
@@ -80,7 +81,7 @@ hr {
 }
 
 .education-main-text {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .spinner-outer-wrapper {
@@ -89,7 +90,7 @@ hr {
 
 .sublist-item {
     list-style-type: circle;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .sublist-item:first-child {
@@ -105,17 +106,61 @@ hr {
 }
 
 .dividor {
-    margin: 50px;
+    margin-bottom: 70px;
+}
+
+.section-heading {
+    display: inline-block;
+    font-size: 26px;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid black;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -1px;
 }
 
 @media screen and (max-width: 1100px) {
     .container {
-        max-width: 100%;
+        width: 100%;
+    }
+    .img-responsive {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .rhs {
+        width: 69%;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
     .padding {
         padding-top: 100px;
+    }
+    .lhs, .rhs {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .education-img-wrapper {
+        margin: 20px;
+    }
+    .education-heading {
+        margin-top: 20px;
+    }
+    .rhs-content-wrapper {
+        padding: 10px;
+    }
+    .sublist-item {
+        margin-left: 20px;
     }
 }
