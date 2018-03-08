@@ -36,6 +36,5 @@ export class EducationComponent implements OnInit {
 
   getUniversityCourses() {
     this.UniversityCourses = this._daoCourses.getUniversityCourses();
-  }
-
+  }  
 }

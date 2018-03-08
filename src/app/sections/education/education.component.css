@@ -51,8 +51,6 @@ hr {
 
 .education-heading {
     font-size: 21px;
-    /* font-weight: bold; */
-    /* opacity: .8; */
     margin-bottom: 10px;
 }
 
@@ -91,6 +89,7 @@ hr {
 .sublist-item {
     list-style-type: circle;
     font-size: 18px;
+    margin-left: 30px;
 }
 
 .sublist-item:first-child {
@@ -109,11 +108,16 @@ hr {
     margin-bottom: 70px;
 }
 
+.dividor-top {
+    margin-bottom: 40px;
+}
+
 .section-heading {
     display: block;
-    font-size: 26px;
+    font-size: 20px;
     padding: 10px;
-    background-color: #242424;
+    border: 1px solid black;
+    background-color: #333;
     color: white;
     box-sizing: border-box;
     position: relative;
@@ -121,6 +125,8 @@ hr {
     margin-right: 20px;
     margin-left: 20px;
     float: right;
+    text-transform: uppercase;
+    font-family: Sans-serif;
 }
 
 @media screen and (max-width: 1100px) {
@@ -163,6 +169,6 @@ hr {
         padding: 10px;
     }
     .sublist-item {
-        margin-left: 20px;
+        margin-left: 30px;
     }
 }

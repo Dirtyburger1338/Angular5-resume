@@ -197,6 +197,28 @@ th.col-3, th.col-2 {
     padding: 2px 16px;
 }
 
+.dividor-top {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    /* background-color: #c9c9c9; */
+    border: 1px solid black;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+    text-transform: uppercase;
+    font-family: Sans-serif;
+}
+
 .modal {
     margin: 0;
 }
