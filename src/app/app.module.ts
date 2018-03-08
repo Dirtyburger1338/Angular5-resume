@@ -20,6 +20,9 @@ import { EnviromentService } from './data-access/api/enviroment.service';
 
 import { SpinnerComponent } from './spinner/spinner.component';
 import { DividerComponent } from './sections/skills/divider/divider.component';
+import { DividerDijkstraComponent } from './sections/education/divider-dijkstra/divider-dijkstra.component';
+import { DividerNancyComponent } from './sections/education/divider-nancy/divider-nancy.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { DividerComponent } from './sections/skills/divider/divider.component';
     NavBarComponent,
     SafeHtmlPipe,
     SpinnerComponent,
-    DividerComponent
+    DividerComponent,
+    DividerDijkstraComponent,
+    DividerNancyComponent    
   ],
   imports: [
     BrowserModule,

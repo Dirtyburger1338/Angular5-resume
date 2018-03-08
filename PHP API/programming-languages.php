@@ -88,23 +88,11 @@ $arr = array(
         "Description" => "Know a little here aswell. But I don't really like this kind of post-back shenanigans."
       ),
       array(
-        "Id" => "15",
-        "Language" => "EpiServer 6 (CMS)",
-        "Stars" => "1/5",
-        "Description" => "Define page, display properties. Pretty much. <br/><br/>How silly of me, I know there is more too it of course."
-      ),
-      array(
         "Id" => "16",
         "Language" => "Python",
         "Stars" => "1/5",
-        "Description" => "A tiny bit. Might be more in the near future (machine learning)."
-      ),
-      array(
-        "Id" => "17",
-        "Language" => "Internet Information Service (IIS)",
-        "Stars" => "1/5",
-        "Description" => "I'm using IIS for hosting webservices and websites at work. <br/><br/>The full Microsoft stack as you have guessed by now."
-      ),
+        "Description" => "Written a few lines for Machine Lerning."
+      ),  
       array(
         "Id" => "1337",
         "Language" => "Ping pong 🏓",

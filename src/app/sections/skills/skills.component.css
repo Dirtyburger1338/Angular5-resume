@@ -14,6 +14,7 @@ p, h1, .summary-click {
     max-width: 1100px;
     box-shadow: 4px 4px 10px black;
     border: 1px solid black;
+    font-family: monospace;
 }
 
 .grid-left-outer {
@@ -30,7 +31,7 @@ p, h1, .summary-click {
     font-family: "Open Sans";
     font-size: 14px;
     float: left;
-    padding-top: 70px;
+    padding-top: 15px;
 }
 
 #programming-table {
@@ -147,6 +148,106 @@ th.col-3, th.col-2 {
     animation-duration: 0.4s
 }
 
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.lhs, .rhs {
+    padding: 20px;
+    float: left;
+}
+
+.lhs {
+    width: 15%;
+}
+
+.rhs {
+    width: 70%;
+}
+
+.enviroments-heading {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.short-description {
+    margin-bottom: 5px;
+}
+
+.timeline {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: .8;
+}
+
+.timeline>p:last-child {
+    font-size: 17px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.enviroments-item-wrapper {
+    clear: left;
+}
+
+.enviroments-main-text {
+    font-size: 18px;
+}
+
+.spinner-outer-wrapper {
+    padding: 20px;
+}
+
+.sublist-item {
+    list-style-type: circle;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.sublist-item:first-child {
+    margin-top: 20px;
+}
+
+.link-to-enviroments-wrapper {
+    margin-top: 20px;
+}
+
+.link-to-enviroments {
+    font-size: 16px;
+}
+
+.dividor {
+    margin-bottom: 70px;
+}
+
+.dividor-top {
+    margin-bottom: 40px;
+}
+
+.container>h1 {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.lhs, .rhs {
+    padding: 20px;
+    float: left;
+}
+
+.list-item {
+    margin-top: 10px;
+}
+
+.list-item:first-child {
+    margin-top: 0px;
+}
+
 /* Add Animation */
 
 @-webkit-keyframes animatetop {
@@ -257,6 +358,12 @@ th.col-3, th.col-2 {
     }
 }
 
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 100%;
+    }  
+}
+
 @media screen and (min-width: 767px) and (max-width: 960px) {
     .grid-right-outer {
         float: initial;
@@ -265,12 +372,8 @@ th.col-3, th.col-2 {
         padding: 10px 0px 10px 0px;
         background-color: orange;
         display: none;
-    }
-    .clear-both {
-        clear: initial;
-    }
+    } 
     .grid-left-outer {
-        float: initial;
         margin: 0 auto;
         width: 100%;
     }
@@ -283,9 +386,16 @@ th.col-3, th.col-2 {
     #programming-table {
         margin-top: 20px;
     }
+    .rhs {
+        width: 69%;
+    }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .enviroments-img-wrapper {
+        margin: 0 auto;
+        max-width: 250px;
+    }
     .grid-right-outer {
         float: initial;
         margin: 0 auto;
@@ -293,9 +403,6 @@ th.col-3, th.col-2 {
         padding: 10px 0px 10px 0px;
         background-color: green;
         display: none;
-    }
-    .clear-both {
-        clear: initial;
     }
     .grid-left-outer {
         float: initial;
@@ -313,5 +420,31 @@ th.col-3, th.col-2 {
     }
     .padding {
         padding-top: 100px;
+    }
+    .container {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    .padding {
+        padding-top: 100px;
+    }
+    .lhs, .rhs {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .education-img-wrapper {
+        margin: 20px;
+    }
+    .education-heading {
+        margin-top: 20px;
+    }
+    .rhs-content-wrapper {
+        padding: 10px;
+    }
+    .sublist-item {
+        margin-left: 30px;
     }
 }

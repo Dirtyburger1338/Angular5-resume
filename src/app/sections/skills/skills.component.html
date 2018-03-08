@@ -66,27 +66,28 @@
 </div>
 
 <app-divider></app-divider>
+<div class="dividor-top"></div>
 
 <div class="container">
     <div class="section-heading-wrapper">
         <div class="section-heading">Enviroments</div>
     </div>
-    <div class="courses-inner-content">
+    <div class="enviroments-inner-content">
         <ul *ngIf="enviroments">
             <li *ngFor="let enviroment of enviroments" class="list-item">
-                <div class="education-item-wrapper">
+                <div class="enviroments-item-wrapper">
                     <div class="lhs">
-                        <div class="education-img-wrapper">
+                        <div class="enviroments-img-wrapper">
                             <img class="img-responsive" [src]="enviroment.Image" />
                         </div>
                         <div class="timeline">
-                            <p class="short-description">{{enviroment.ShortDescription}}</p>                            
+                            <p class="short-description">{{enviroment.ShortDescription}}</p>
                         </div>
                     </div>
                     <div class="rhs">
                         <div class="rhs-content-wrapper">
-                            <h2 class="education-heading"> {{enviroment.Heading}} </h2>
-                            <p class="education-main-text"> {{enviroment.Context}} </p>
+                            <h2 class="enviroments-heading"> {{enviroment.Heading}} </h2>
+                            <p class="enviroments-main-text"> {{enviroment.Context}} </p>
                             <ul>
                                 <div *ngIf="enviroment.List">
                                     <li class="sublist-item" *ngFor="let listItem of enviroment.List">
@@ -94,8 +95,8 @@
                                     </li>
                                 </div>
                             </ul>
-                            <div class="link-to-education-wrapper">
-                                <a class="link-to-education" href="{{enviroment.Link}}" target="_blank">Link</a>
+                            <div class="link-to-enviroments-wrapper">
+                                <a class="link-to-enviroments" href="{{enviroment.Link}}" target="_blank">Link</a>
                             </div>
                         </div>
                     </div>
@@ -112,4 +113,4 @@
     </div>
 </div>
 
-<div class="dividor-top"></div>
+<div class="dividor"></div>

@@ -13,10 +13,6 @@
     padding-top: 130px;
 }
 
-hr {
-    margin: 0px;
-}
-
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -50,7 +46,7 @@ hr {
 }
 
 .education-heading {
-    font-size: 21px;
+    font-size: 23px;
     margin-bottom: 10px;
 }
 
