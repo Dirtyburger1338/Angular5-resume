@@ -11,7 +11,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('name', [
       transition('* => *', [
         animate('.2s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateX(10px)', offset: 0.0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
@@ -20,7 +20,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('occupation', [
       transition('* => *', [
         animate('.4s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateX(10px)', offset: 0.0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
@@ -29,7 +29,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('aboutAge', [
       transition('* => *', [
         animate('.6s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(300px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateY(100px)', offset: 0.0 }),
           style({ opacity: 0, transform: 'translateY(0)', offset: 0.5 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
@@ -39,8 +39,8 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('aboutCity', [
       transition('* => *', [
         animate('.6s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
-          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.5 }),
+          style({ opacity: 0, transform: 'translateY(-50px)', offset: 0.0 }),
+          // style({ opacity: 0, transform: 'translateX(100px)', offset: 0.5 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
@@ -49,8 +49,8 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('aboutEmployer', [
       transition('* => *', [
         animate('.6s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
-          style({ opacity: 0, transform: 'translateY(100px)', offset: 0.5 }),
+          // style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
+          style({ opacity: 0, transform: 'translateY(-100px)', offset: 0.0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
