@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 import { ProgrammingLanguageService } from '../../data-access/api/programming-language.service';
+import { EnviromentService } from '../../data-access/api/enviroment.service';
 import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
 import { SafeHtmlPipe } from '../../safe-html.pipe';
+import { Enviroment } from '../../classes/Enviroment';
 
 @Component({
   selector: 'app-skills',
@@ -48,13 +50,15 @@ export class SkillsComponent implements OnInit {
 
   programmingLanguages: ProgrammingLanguages[] = [];
   programmingDescription: ProgrammingLanguages[] = [];
+  enviroments: Enviroment[] = [];
 
-  constructor(private _dao: ProgrammingLanguageService) { }
+  constructor(private _programmingDAO: ProgrammingLanguageService, private _enviromentService: EnviromentService) { }
 
   ngOnInit() {
     delay(0).then(() => {
-      this.programmingLanguages = this._dao.getProgrammingLanguages();
+      this.programmingLanguages = this._programmingDAO.getProgrammingLanguages();
     });
+    this.enviroments = this._enviromentService.getEnviroments();
   }
 
   changeProgrammingDescription(index: number, $event: any) {

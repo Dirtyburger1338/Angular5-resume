@@ -12,7 +12,7 @@ export class CoursesService {
   workContent: Courses[] = [];
   universityContent: Courses[] = [];
 
-  constructor(private http: HttpClient, sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
   public getWorkCourses(): Courses[] {
     try {

@@ -11,7 +11,7 @@ export class ProgrammingLanguageService {
   showProgrammingSpinner = true;
   programmingLanguages: ProgrammingLanguages[] = [];
 
-  constructor(private http: HttpClient, sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
   public getProgrammingLanguages(): ProgrammingLanguages[] {
     try {

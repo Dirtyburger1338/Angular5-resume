@@ -1,32 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-
-import { Education } from '../../classes/Education';
+import { Enviroment } from '../../classes/Enviroment';
 
 @Injectable()
-export class EducationService {
+export class EnviromentService {
 
-  apiProgrammingUrl = 'http://localhost:4201/education.php';
-  content: Education[] = [];
+  apiProgrammingUrl = 'http://localhost:4201/enviroments.php';
+  content: Enviroment[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
-  public getEducations(): Education[] {
+  public getEnviroments(): Enviroment[] {
     try {
       if (this.content.length > 0) {
         return this.content;
       }
 
-      this.http.get<Education[]>(this.apiProgrammingUrl).subscribe(response => {
+      this.http.get<Enviroment[]>(this.apiProgrammingUrl).subscribe(response => {
 
         for (let i = 0; i < response.length; i++) {
 
-          const tmp = new Education(
+          const tmp = new Enviroment(
             response[i].Id,
             response[i].ShortDescription,
-            response[i].From,
-            response[i].To,
             response[i].Heading,
             response[i].Context,
             'assets/images/' + response[i].Image,
@@ -39,7 +36,7 @@ export class EducationService {
         }
 
       });
-
+      
       return this.content;
     } catch (e) {
       console.log(e);
