@@ -73,6 +73,7 @@ export class AboutComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.profilePicture = 'assets/images/profile-picture.jpg';
+    // this.profilePicture = 'assets/images/henlarss.jpg';
     this.setAge(this.dateOfBirth);
   }
 

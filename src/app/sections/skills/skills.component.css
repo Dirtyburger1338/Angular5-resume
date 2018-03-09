@@ -160,7 +160,7 @@ th.col-3, th.col-2 {
 }
 
 .lhs {
-    width: 15%;
+    width: 20%;
 }
 
 .rhs {
@@ -394,7 +394,7 @@ th.col-3, th.col-2 {
 @media screen and (max-width: 768px) {
     .enviroments-img-wrapper {
         margin: 0 auto;
-        max-width: 250px;
+        max-width: 350px;
     }
     .grid-right-outer {
         float: initial;

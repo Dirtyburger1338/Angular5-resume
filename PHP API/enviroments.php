@@ -2,21 +2,7 @@
 header("Content-Type: application/json;charset=utf-8");
 header('Access-Control-Allow-Origin: *');
 
-$arr = array(
-      array(
-        "Id" => "1",
-        "ShortDescription" => "Linux / Unix",
-        "Heading" => "Linux / Unix",
-        "Context" => "I have some basic knowledge of Linux distributions.",
-        "Image" => "linux-logo.png",
-        "Introduction" => "Intro",
-        "List" => array(
-            "Administrating UNIX systems",
-            "Raspberry pies",
-            "sudo make me a sandwich -R"
-        ),
-        "Link" => "https://en.wikipedia.org/wiki/Linux"
-      ),
+$arr = array(      
       array(
         "Id" => "1",
         "ShortDescription" => "IIS",
@@ -34,6 +20,20 @@ $arr = array(
       ),
       array(
         "Id" => "1",
+        "ShortDescription" => "Linux / Unix",
+        "Heading" => "Linux / Unix",
+        "Context" => "I have some basic knowledge of Linux distributions.",
+        "Image" => "linux_logo.jpg",
+        "Introduction" => "Intro",
+        "List" => array(
+            "Administrating UNIX systems",
+            "Raspberry pies",
+            "sudo make me a sandwich -R"
+        ),
+        "Link" => "https://en.wikipedia.org/wiki/Linux"
+      ),
+      array(
+        "Id" => "1",
         "ShortDescription" => "EpiServer 6",
         "Heading" => "EpiSerer 6 - Content Managment System (CMS)",
         "Context" => "Been working in a project where EpiServer 6 was used. Defining pages and displaying properties pretty much, however there is alot more to this CMS tool.",
@@ -48,7 +48,7 @@ $arr = array(
         "ShortDescription" => "VS 2010-2017",
         "Heading" => "Visual Studio - Integrated Development Enviroment (IDE)",
         "Context" => "Almost all of why work have gone through this IDE. Unless there are some lightweigh applications/scripts or Java for instance.",
-        "Image" => "VS_logo.png",
+        "Image" => "vs_logo.jpg",
         "Introduction" => "Intro",
         "List" => array(           
         ),

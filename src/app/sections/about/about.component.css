@@ -162,7 +162,9 @@ p {
         margin: 0 auto;
         width: 100%;
     }
-
+    .profile-picture-wrapper {
+        max-width: 300px;
+    }
     .padding {
         padding-top: 100px;
     }
