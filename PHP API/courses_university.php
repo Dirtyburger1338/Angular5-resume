@@ -6,13 +6,16 @@ $arr = array(
       array(
         "Id" => "1",
         "ShortDescription" => "Machine Learning",
-        "From" => "2018-01-12",
-        "To" => "2018-03-25",
+        "From" => "2018",
+        "To" => ", 3HP",
         "Heading" => "Machine Learning",
-        "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
+        "Context" => "- Ongoing",
         "Image" => "ML.jpg",
-        "Introduction" => "Intro",
-        "List" => array(      
+        "Introduction" => "",
+        "List" => array(
+          "K nearest neighbor (k-NN)",
+          "Artificial neural network's (ANN)",
+          "Other"
         ),
         "Link" => "https://www.bth.se/eng/courses/C5650/20181/"
       ),
@@ -22,10 +25,13 @@ $arr = array(
         "From" => "?",
         "To" => "?",
         "Heading" => "Next up - Mathematical Statistics",
-        "Context" => "Probability, Statistics, and Stochastic Processes.",
+        "Context" => "",
         "Image" => "math.jpg",
-        "Introduction" => "Intro",
-        "List" => array(      
+        "Introduction" => "",
+        "List" => array(
+          "Probability",
+          "Statistics",
+          "Stochastic Processes"
         ),
         "Link" => "https://liu.se/en/organisation/liu/mai/ms"
       ),
@@ -35,10 +41,14 @@ $arr = array(
         "From" => "?",
         "To" => "?",
         "Heading" => "Next up - Data Mining",
-        "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
+        "Context" => "",
         "Image" => "DM.jpg",
-        "Introduction" => "Intro",
-        "List" => array(      
+        "Introduction" => "",
+        "List" => array(
+          "Preprocessing",
+          "Patterns",
+          "Modeling",
+          "Evaluation"
         ),
         "Link" => "https://en.wikipedia.org/wiki/Data_mining"
       )

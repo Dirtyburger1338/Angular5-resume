@@ -6,10 +6,10 @@ $arr = array(
       array(
         "Id" => "1",
         "ShortDescription" => "University",
-        "From" => "2013",
+        "From" => "2013 - ",
         "To" => "2016",
         "Heading" => "Degree of Bachelor of Science with a major in Computer Enineering",
-        "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
+        "Context" => "",
         "Image" => "miun_logo.png",
         "Introduction" => "Intro",
         "List" => array(
@@ -25,10 +25,10 @@ $arr = array(
       array(
         "Id" => "2",
         "ShortDescription" => "High School",
-        "From" => "2003",
+        "From" => "2003 - ",
         "To" => "2006",
         "Heading" => "Natural Science - alignment to Mathematics and Computers",
-        "Context" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam delectus non nesciunt quis quam, tempore consequuntur explicabo rem repellendus, vel alias excepturi incidunt assumenda provident laborum suscipit vitae ad libero?",
+        "Context" => "University-preparatory high school program (gymnasium), primarily designed to prepare students for higher education.",
         "Image" => "sg.png",
         "Introduction" => "Intro",
         "List" => array(
