@@ -18,6 +18,7 @@ $arr = array(
             "Theory",
             "Algorithms and datastructurs",
             "Networks",
+            "Security",
             "Other"
         ),
         "Link" => "https://www.miun.se/utbildning/program/data-och-it/datateknik/utbildningsplan/?utbildningsplanid=1069"
