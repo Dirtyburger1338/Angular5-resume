@@ -13,9 +13,13 @@ $arr = array(
         "Image" => "ML.jpg",
         "Introduction" => "",
         "List" => array(
-          "K nearest neighbor (k-NN)",
-          "Artificial neural network's (ANN)",
-          "Other"
+          "K-nearest neighbor",
+          "K-means",
+          "Correlation coefficient",
+          "Artificial neural network's and Gradient Descents",
+          "Artificial neural network's and Deep Learning",
+          "Convolutional Neural Network's and Decition Trees",
+          "Clustering methods"
         ),
         "Link" => "https://www.bth.se/eng/courses/C5650/20181/"
       ),
