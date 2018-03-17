@@ -7,11 +7,17 @@ import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 @Injectable()
 export class ProgrammingLanguageService {
 
-  apiProgrammingUrl = 'http://localhost:4201/programming-languages.php';
+  base: string;
+  port: string;
+  apiProgrammingUrl: string;
   showProgrammingSpinner = true;
   programmingLanguages: ProgrammingLanguages[] = [];
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    this.port = ':4201'; // window.location.port;
+    this.base = 'http://' + window.location.hostname + this.port;
+    this.apiProgrammingUrl = this.base + '/api/programming-languages.php';
+  }
 
   public getProgrammingLanguages(): ProgrammingLanguages[] {
     try {

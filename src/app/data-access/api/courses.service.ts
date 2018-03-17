@@ -1,25 +1,40 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 import { Courses } from '../../classes/Courses';
+import { request } from 'https';
 
 @Injectable()
-export class CoursesService {
+export class CoursesService implements OnInit {
 
-  apiCorsesWorkUrl = 'http://localhost:4201/courses_work.php';
-  apiCorsesUniversityUrl = 'http://localhost:4201/courses_university.php';
+  base: string;
+  port: string;
+  apiCorsesWorkUrl: string;
+  apiCorsesUniversityUrl: string;
   workContent: Courses[] = [];
   universityContent: Courses[] = [];
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(
+    private http: HttpClient,
+    private sanitizer: DomSanitizer,
+    private router: Router) {
+    this.port = ':4201'; // window.location.port;
+    this.base = 'http://' + window.location.hostname + this.port;
+    this.apiCorsesUniversityUrl = this.base + '/api/courses_university.php';
+    this.apiCorsesWorkUrl = this.base + '/api/courses_work.php';
+  }
+
+  ngOnInit() {
+
+  }
 
   public getWorkCourses(): Courses[] {
     try {
       if (this.workContent.length > 0) {
         return this.workContent;
       }
-
       this.http.get<Courses[]>(this.apiCorsesWorkUrl).subscribe(response => {
 
         for (let i = 0; i < response.length; i++) {

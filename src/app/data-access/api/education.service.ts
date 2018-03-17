@@ -7,10 +7,16 @@ import { Education } from '../../classes/Education';
 @Injectable()
 export class EducationService {
 
-  apiProgrammingUrl = 'http://localhost:4201/education.php';
+  base: string;
+  port: string;
+  apiProgrammingUrl: string;
   content: Education[] = [];
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    this.port = ':4201'; // window.location.port;
+    this.base = 'http://' + window.location.hostname + this.port;
+    this.apiProgrammingUrl = this.base + '/api/education.php';
+   }
 
   public getEducations(): Education[] {
     try {

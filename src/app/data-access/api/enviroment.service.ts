@@ -6,10 +6,16 @@ import { Enviroment } from '../../classes/Enviroment';
 @Injectable()
 export class EnviromentService {
 
-  apiProgrammingUrl = 'http://localhost:4201/enviroments.php';
+  base: string;
+  port: string;
+  apiProgrammingUrl: string;
   content: Enviroment[] = [];
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    this.port = ':4201'; // window.location.port;
+    this.base = 'http://' + window.location.hostname + this.port;
+    this.apiProgrammingUrl = this.base + '/api/enviroments.php';
+  }
 
   public getEnviroments(): Enviroment[] {
     try {
@@ -36,7 +42,7 @@ export class EnviromentService {
         }
 
       });
-      
+
       return this.content;
     } catch (e) {
       console.log(e);
