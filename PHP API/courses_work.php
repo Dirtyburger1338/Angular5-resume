@@ -3,7 +3,7 @@ header("Content-Type: application/json;charset=utf-8");
 header('Access-Control-Allow-Origin: *');
 
 $arr = array(
-      array(
+    array(
         "Id" => "1",
         "ShortDescription" => "C# Master Class",
         "From" => "2017-06-26",
@@ -22,11 +22,11 @@ $arr = array(
             "Higher Order Programming",
             "Reflection and attributes",
             "Event driven architecture",
-            "Encoding and Unicode"
+            "Encoding and Unicode",
         ),
-        "Link" => "https://informator.se/utbildningar/systemutveckling/net-visual-studio/net_generellt/c-master-class"
-      ),
-      array(
+        "Link" => "https://informator.se/utbildningar/systemutveckling/net-visual-studio/net_generellt/c-master-class",
+    ),
+    array(
         "Id" => "2",
         "ShortDescription" => "IBM BPM",
         "From" => "2016-09-12",
@@ -37,9 +37,9 @@ $arr = array(
         "Introduction" => "Intro",
         "List" => array(
         ),
-        "Link" => "https://edu.arrow.com/uk/c/index.html/129/websphere-course-list"
-      ),
-      array(
+        "Link" => "https://edu.arrow.com/uk/c/index.html/129/websphere-course-list",
+    ),
+    array(
         "Id" => "3",
         "ShortDescription" => "IBM BPM",
         "From" => "2016-08-22",
@@ -50,9 +50,8 @@ $arr = array(
         "Introduction" => "Intro",
         "List" => array(
         ),
-        "Link" => "https://edu.arrow.com/uk/c/index.html/129/websphere-course-list"
-      )
+        "Link" => "https://edu.arrow.com/uk/c/index.html/129/websphere-course-list",
+    ),
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);
-?>

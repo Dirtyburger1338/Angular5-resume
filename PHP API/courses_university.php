@@ -3,7 +3,7 @@ header("Content-Type: application/json;charset=utf-8");
 header('Access-Control-Allow-Origin: *');
 
 $arr = array(
-      array(
+    array(
         "Id" => "1",
         "ShortDescription" => "Machine Learning",
         "From" => "2018",
@@ -13,17 +13,18 @@ $arr = array(
         "Image" => "ML.jpg",
         "Introduction" => "",
         "List" => array(
-          "K-nearest neighbor",
-          "K-means",
-          "Correlation coefficient",
-          "Artificial neural network's and Gradient Descents",
-          "Artificial neural network's and Deep Learning",
-          "Convolutional Neural Network's and Decition Trees",
-          "Clustering methods"
+            "K-nearest neighbor",
+            "K-means",
+            "Correlation coefficient",
+            "Artificial neural network's and Gradient Descents",
+            "Artificial neural network's and Deep Learning",
+            "Convolutional Neural Network's and Decition Trees",
+            "Clustering methods",
+            "Practical applications in data mining"
         ),
-        "Link" => "https://www.bth.se/eng/courses/C5650/20181/"
-      ),
-      array(
+        "Link" => "https://www.bth.se/eng/courses/C5650/20181/",
+    ),
+    array(
         "Id" => "1",
         "ShortDescription" => "Mathematical Statistics",
         "From" => "?",
@@ -33,13 +34,13 @@ $arr = array(
         "Image" => "math.jpg",
         "Introduction" => "",
         "List" => array(
-          "Probability",
-          "Statistics",
-          "Stochastic Processes"
+            "Probability",
+            "Statistics",
+            "Stochastic Processes",
         ),
-        "Link" => "https://liu.se/en/organisation/liu/mai/ms"
-      ),
-      array(
+        "Link" => "https://liu.se/en/organisation/liu/mai/ms",
+    ),
+    array(
         "Id" => "1",
         "ShortDescription" => "Data Mining",
         "From" => "?",
@@ -49,14 +50,13 @@ $arr = array(
         "Image" => "DM.jpg",
         "Introduction" => "",
         "List" => array(
-          "Preprocessing",
-          "Patterns",
-          "Modeling",
-          "Evaluation"
+            "Preprocessing",
+            "Patterns",
+            "Modeling",
+            "Evaluation",
         ),
-        "Link" => "https://en.wikipedia.org/wiki/Data_mining"
-      )
+        "Link" => "https://en.wikipedia.org/wiki/Data_mining",
+    ),
 );
 
 echo json_encode($arr, JSON_PRETTY_PRINT);
-?>

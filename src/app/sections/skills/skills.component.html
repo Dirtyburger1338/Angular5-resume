@@ -27,6 +27,15 @@
                     <app-spinner></app-spinner>
                 </div>
             </div>
+            <div class="rating-wrapper" *ngIf="rating">
+                <div *ngFor="let rate of rating">
+                    <div class="rate-stars" [innerHTML]="rate.Stars | safeHtml"></div>
+                    <div class="rate-description">
+                        <i [innerHTML]="rate.Description | safeHtml"></i>
+                    </div>
+                    <div class="clear-both"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -39,8 +48,8 @@
             </div>
 
             <div class="placeholder" *ngIf="programmingDescription.length === 0 && programmingLanguages.length !== 0">
-                <p class="blink" style="float:left;">&#9668;</p>
-                <p style="float:left;">&nbsp;&nbsp;&nbsp;(Click)</p>
+                <p class="blink">&#9668;</p>
+                <p class="placeholder-text">(Click)</p>
             </div>
         </div>
     </div>
@@ -48,12 +57,12 @@
     <div class="clear-both"></div>
 
 
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" (click)="closeModal()">
         <div *ngIf="programmingDescription.length > 0">
             <!-- Modal content -->
             <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close" (click)="closeModal()">&times;</span>
+                <div class="modal-header" >
+                    <span class="close"></span>
                     <h1 class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
                 </div>
                 <div class="modal-body">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Rating } from '../../classes/Rating';
 import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 import { ProgrammingLanguageService } from '../../data-access/api/programming-language.service';
 import { EnviromentService } from '../../data-access/api/enviroment.service';
@@ -51,6 +52,7 @@ export class SkillsComponent implements OnInit {
   programmingLanguages: ProgrammingLanguages[] = [];
   programmingDescription: ProgrammingLanguages[] = [];
   enviroments: Enviroment[] = [];
+  rating: Rating[] = [];
 
   constructor(private _programmingDAO: ProgrammingLanguageService, private _enviromentService: EnviromentService) { }
 
@@ -59,6 +61,8 @@ export class SkillsComponent implements OnInit {
       this.programmingLanguages = this._programmingDAO.getProgrammingLanguages();
     });
     this.enviroments = this._enviromentService.getEnviroments();
+    this.loadRating();
+    this.changeBlinkColor();
   }
 
   changeProgrammingDescription(index: number, $event: any) {
@@ -70,6 +74,50 @@ export class SkillsComponent implements OnInit {
     }
 
     this.openModal();
+  }
+
+  changeBlinkColor() {
+    let colors = ['red', 'black'];
+    let blink = document.getElementsByClassName('blink') as any;
+
+    setInterval(function () {
+      if (blink[0].style.color == colors[0]) {
+        blink[0].style.color = colors[1];
+      } else {
+        blink[0].style.color = colors[0];
+      }
+    }, 750);
+  }
+
+  loadRating() {
+    for (let i = 0; i < 5; i++) {
+      this.rating.push(new Rating(i, '', ''));
+      for (let j = 0; j <= i; j++) {
+        this.rating[i].Stars += '<span class="fa fa-star filled" style="color: #169eb6; font-size: 20px;"></span>';
+      }
+    }
+
+    for (let i = 0; i < this.rating.length; i++) {
+      switch (i) {
+        case 0:
+          this.rating[i].Description = '- <span style="font-weight:600;">Beginner</span>';
+          break;
+        case 1:
+          this.rating[i].Description = '- <span style="font-weight:600;">Novice</span>';
+          break;
+        case 2:
+          this.rating[i].Description = '- <span style="font-weight:600;">Intermediate</span>';
+          break;
+        case 3:
+          this.rating[i].Description = '- <span style="font-weight:600;">Experienced</span>';
+          break;
+        case 4:
+          this.rating[i].Description = '- <span style="font-weight:600;">Expert</span>';
+          break;
+        default:
+          break;
+      }
+    }
   }
 
   closeModal() {
