@@ -1,13 +1,11 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Router } from '@angular/router';
 
 import { Courses } from '../../classes/Courses';
-import { request } from 'https';
 
 @Injectable()
-export class CoursesService implements OnInit {
+export class CoursesService {
 
   base: string;
   port: string;
@@ -16,18 +14,11 @@ export class CoursesService implements OnInit {
   workContent: Courses[] = [];
   universityContent: Courses[] = [];
 
-  constructor(
-    private http: HttpClient,
-    private sanitizer: DomSanitizer,
-    private router: Router) {
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
     this.port = ':4201'; // window.location.port;
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiCorsesUniversityUrl = this.base + '/api/courses_university.php';
     this.apiCorsesWorkUrl = this.base + '/api/courses_work.php';
-  }
-
-  ngOnInit() {
-
   }
 
   public getWorkCourses(): Courses[] {
