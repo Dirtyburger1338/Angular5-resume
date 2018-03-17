@@ -62,7 +62,6 @@ export class SkillsComponent implements OnInit {
     });
     this.enviroments = this._enviromentService.getEnviroments();
     this.loadRating();
-    this.changeBlinkColor();
   }
 
   changeProgrammingDescription(index: number, $event: any) {
@@ -74,19 +73,6 @@ export class SkillsComponent implements OnInit {
     }
 
     this.openModal();
-  }
-
-  changeBlinkColor() {
-    let colors = ['red', 'black'];
-    let blink = document.getElementsByClassName('blink') as any;
-
-    setInterval(function () {
-      if (blink[0].style.color == colors[0]) {
-        blink[0].style.color = colors[1];
-      } else {
-        blink[0].style.color = colors[0];
-      }
-    }, 750);
   }
 
   loadRating() {
