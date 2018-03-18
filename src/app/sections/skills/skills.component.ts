@@ -86,7 +86,7 @@ export class SkillsComponent implements OnInit {
     for (let i = 0; i < this.rating.length; i++) {
       switch (i) {
         case 0:
-          this.rating[i].Description = '- <span style="font-weight:600;">Beginner</span>';
+          this.rating[i].Description = '- <span style="font-weight:600;">Basic knowledge</span>';
           break;
         case 1:
           this.rating[i].Description = '- <span style="font-weight:600;">Novice</span>';

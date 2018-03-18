@@ -1,33 +1,115 @@
 <div class="padding"></div>
+<div class="dividor"></div>
 <div class="container">
-    <div class="about-content-wrapper">
-        <div class="profile-picture-wrapper float-left">
-            <img id="profile-picture" [src]="profilePicture" class="img-responsive" />
-        </div>
-        <div class="about-profile float-left">
-            <div class="text-hello">hello there</div>
-            <div class="text-name" >
-                <h1 @name>
-                    <span>I'm</span> {{ name }}
-                </h1>
-                <span class="occupation" @occupation>{{ occupation }}</span>
+    <div class="section-heading-wrapper">
+        <div class="section-heading">Profile</div>
+    </div>
+    <div *ngIf="profile">
+        <div class="about-content-wrapper">
+            <div class="profile-lhs border-box">
+                <div class="profile-img-wrapper">
+                    <img class="img-responsive" [src]="profile.Image" />
+                </div>
             </div>
-            <hr />
-            <ul class="profile-list">
-                <li @aboutAge>
-                    <span class="title">Age</span>
-                    <span class="content">{{age}}</span>
-                </li>
-                <li @aboutCity>
-                    <span class="title">City</span>
-                    <span class="content">{{city}}</span>
-                </li>
-                <li @aboutEmployer>
-                    <span class="title">Employer</span>
-                    <span class="content">{{employer}}</span>
-                </li>
-            </ul>
+            <div class="profile-rhs border-box">
+                <div class="rhs-wrapper">
+                    <div class="text-hello">hello there</div>
+                    <div class="text-name">
+                        <h1 @name>
+                            <span>I'm</span> {{ profile.FullName }}
+                        </h1>
+                        <span class="occupation" @occupation>{{ profile.Occupation }}</span>
+                    </div>
+                    <hr />
+                    <ul class="profile-list">
+                        <li @aboutAge>
+                            <span class="title">Age</span>
+                            <span class="content">{{profile.Age}}</span>
+                        </li>
+                        <li @aboutCity>
+                            <span class="title">City</span>
+                            <span class="content">{{profile.City}}</span>
+                        </li>
+                        <li @aboutEmployer>
+                            <span class="title">Employer</span>
+                            <span class="content">{{profile.Employer}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear-both"></div>
         </div>
-        <div class="clear-both"></div>
+    </div>
+    <div class="spinner-outer-wrapper" *ngIf="!profile">
+        <div class="spinner-wrapper-aside">
+            <app-spinner></app-spinner>
+        </div>
     </div>
 </div>
+
+<div class="dividor"></div>
+
+<div class="container">
+    <div class="section-heading-wrapper">
+        <div class="section-heading">General information</div>
+    </div>
+    <div class="general-information-wrapper">
+        <div class="general-content" *ngIf="profile">
+            <div class="general-short-description-heading">Short description</div>
+            <div class="general-text margin-top-20 margin-bottom-20" [innerHTML]="profile.Description | safeHtml"></div>
+        </div>
+        <hr>
+        <div *ngIf="profile">
+            <div class="general-language-heading margin-top-20">Languages:</div>
+            <div class="general-language margin-top-20">
+                <li>{{ profile.MainLanguage }}</li>
+            </div>
+            <div class="general-language">
+                <li>{{ profile.SecondaryLanguage }}</li>
+            </div>
+        </div>
+        <!-- spinner -->
+        <div class="spinner-outer-wrapper" *ngIf="!profile">
+            <div class="spinner-wrapper-aside">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dividor"></div>
+
+<div class="container">
+    <div class="section-heading-wrapper">
+        <div class="section-heading">Employments</div>
+    </div>
+    <div class="general-information-wrapper">
+        <div class="general-content" *ngIf="employments.length != 0">
+            <div *ngFor="let employer of employments">
+                <div class="employment-lhs">
+                    <div class="employment-img-wrapper margin-top-20">
+                        <img class="img-responsive" [src]="employer.EmployerLogo" />
+                    </div>
+                    <div class="timeline">
+                        <p class="employer">{{employer.Employer}}</p>
+                        <p class="fromTo">{{employer.From}}{{employer.To}}</p>
+                    </div>
+                </div>
+                <div class="employment-rhs margin-top-20">
+                    <div class="employment-rhs-content">
+                        <div class="employer-heading">{{employer.Employer}}</div>
+                        <div class="employer-description">{{employer.Description}}</div>
+                    </div>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+        </div>
+
+        <!-- spinner -->
+        <div class="spinner-outer-wrapper" *ngIf="employments.length == 0">
+            <div class="spinner-wrapper-aside">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dividor"></div>

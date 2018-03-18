@@ -87,6 +87,7 @@ a:hover, a:active {
 
 .education-main-text {
     font-size: 18px;
+    line-height: 1.4;
 }
 
 .spinner-outer-wrapper {
@@ -112,7 +113,7 @@ a:hover, a:active {
 }
 
 .dividor {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .dividor-top {

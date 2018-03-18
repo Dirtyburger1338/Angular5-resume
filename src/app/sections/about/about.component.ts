@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
+import { AboutService } from '../../data-access/api/about.service';
+import { Profile } from '../../classes/Profile';
+import { SafeHtmlPipe } from '../../safe-html.pipe';
+import { Employment } from '../../classes/Employment';
 
 @Component({
   selector: 'app-about',
@@ -40,7 +43,6 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
       transition('* => *', [
         animate('.6s ease-in', keyframes([
           style({ opacity: 0, transform: 'translateY(-50px)', offset: 0.0 }),
-          // style({ opacity: 0, transform: 'translateX(100px)', offset: 0.5 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
       ])
@@ -49,7 +51,6 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
     trigger('aboutEmployer', [
       transition('* => *', [
         animate('.6s ease-in', keyframes([
-          // style({ opacity: 0, transform: 'translateX(100px)', offset: 0.0 }),
           style({ opacity: 0, transform: 'translateY(-100px)', offset: 0.0 }),
           style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 }),
         ]))
@@ -58,31 +59,31 @@ import { trigger, style, transition, animate, keyframes, query, stagger, state }
 
   ]
 })
-export class AboutComponent implements OnInit, AfterViewInit {
+export class AboutComponent implements OnInit {
+  profile: Profile;
+  employments: Employment[] = [];
 
-  profilePicture: string;
-  email = 'me@henriklarsson.eu';
-  name = 'Henrik Larsson';
-  age: number;
-  dateOfBirth = '1987-07-16';
-  employer = 'Sogeti Sverige AB';
-  city = 'Sundsvall, Sweden';
-  occupation = ' - Software engineer';
-
-  constructor() { }
+  constructor(private _dao: AboutService) { }
 
   ngOnInit() {
-    this.profilePicture = 'assets/images/profile-picture.jpg';
-    // this.profilePicture = 'assets/images/henlarss.jpg';
-    this.setAge(this.dateOfBirth);
+    this.getProfileData();
+    this.getEmplyments();
   }
 
-  ngAfterViewInit() {
+  getProfileData() {
+    this._dao.getProfile().subscribe(data => {
+      this.profile = data;
+      this.setAge(this.profile.DateOfBirth);
+    });
+  }
 
+  getEmplyments() {
+    this.employments = this._dao.getEmplyments();
+    console.log(this.employments);
   }
 
   setAge(dateString) {
-    this.age = this.getAge(dateString);
+    this.profile.Age = this.getAge(dateString);
   }
 
   getAge(dateString): number {
@@ -90,10 +91,15 @@ export class AboutComponent implements OnInit, AfterViewInit {
     const birthDate = new Date(dateString);
     let age = today.getFullYear() - birthDate.getFullYear();
     const m = today.getMonth() - birthDate.getMonth();
+
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
     }
 
     return age;
   }
+}
+
+function delay(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }

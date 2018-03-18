@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-/* @import url(https://fonts.googleapis.com/css?family=Dosis); */
-
 p {
     font-family: "Open Sans";
 }
@@ -9,10 +7,47 @@ p {
     padding-top: 130px;
 }
 
+.border-box {
+    box-sizing: border-box;
+}
+
+.profile-lhs, .profile-rhs {
+    display: block;
+    float: left;
+}
+
+.profile-lhs {
+    width: 30%;
+}
+
+.profile-rhs {
+    width: 70%;
+}
+
+.rhs-wrapper {
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.profile-img-wrapper {
+    float: right;
+    margin-right: 20px;
+}
+
 .img-responsive {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.timeline {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    opacity: .8;
+    font-family: "Open Sans";
+    line-height: 1.4;
 }
 
 .profile-picture-wrapper {
@@ -20,10 +55,51 @@ p {
 }
 
 .about-content-wrapper {
-    margin: 0 auto;
-    /* background-color: green; */
-    max-width: 80%;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
+}
+
+.general-information-wrapper {
+    padding: 20px;
+    font-family: "Open Sans";
+}
+
+.general-short-description-heading, .general-language-heading {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.general-text, .general-language {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.emplyment-logo {
+    max-width: 200px;
+}
+
+.employment-lhs {
+    box-sizing: border-box;
+    width: 20%;
+    float: left;
+}
+
+.employment-rhs {
+    float: left;
+    box-sizing: border-box;
+    width: 80%;
+}
+
+.employment-rhs-content {
+    margin-left: 30px;
+}
+
+.employer-heading {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.employer-description {
+    margin-top: 20px;
 }
 
 .text-hello {
@@ -114,6 +190,28 @@ p {
     opacity: .9;
 }
 
+.dividor {
+    margin-bottom: 40px;
+}
+
+.section-heading {
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #3d3d3d;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -21px;
+    margin-bottom: -21px;
+    margin-right: 20px;
+    margin-left: 20px;
+    float: right;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
 .content {
     font-family: monospace;
     font-size: 16px;
@@ -122,22 +220,27 @@ p {
     opacity: .7;
 }
 
+.spinner-outer-wrapper {
+    margin: 20px;
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 1200px) {
     .container {
         max-width: 100%;
     }
 }
 
-@media screen and (max-width: 850px) {
-    .about-profile {
-        clear: both;
-        float: initial;
-        padding: 20px 0px 20px 0px;
-        margin: 0 auto;
-    }
-    .profile-picture-wrapper {
-        float: initial;
-        margin: 0 auto;
+@media screen and (max-width: 960px) {
+    .general-content {
+        margin-top: 20px;
     }
 }
 
@@ -155,7 +258,6 @@ p {
     .padding {
         padding-top: 100px;
     }
-
     .text-name>h1 {
         font-size: 20px;
         font-family: monospace;
@@ -163,11 +265,26 @@ p {
         margin-top: 20px;
         opacity: .9;
     }
-    
     .text-name>h1>span {
         font-size: 20px;
         font-family: monospace;
         font-weight: lighter;
         opacity: .9;
+    }
+    .profile-rhs, .profile-lhs {
+        float: initial;
+        width: 100%;
+    }
+    .rhs-wrapper {
+        /* display: inline-block; */
+        margin-top: 20px;
+    }
+    .profile-lhs {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .rhs-wrapper {
+        margin: 0px;
     }
 }

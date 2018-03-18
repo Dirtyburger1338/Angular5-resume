@@ -106,11 +106,11 @@ $arr = array(
         "Description" => "I got a small dev-kid at home that I'm fiddeling with when I got some spare time.",
     ),
     array(
-      "Id" => "18",
-      "Language" => "Go-lang",
-      "Stars" => "1/5",
-      "Description" => "Tried this out for a bit in Advent of Code: <a href='http://www.adventofcode.com' target='_blank'>adventofcode.com</a>.",
-  ),
+        "Id" => "18",
+        "Language" => "Go-lang",
+        "Stars" => "1/5",
+        "Description" => "Tried this out for a bit in Advent of Code: <a href='http://www.adventofcode.com' target='_blank'>adventofcode.com</a>.",
+    ),
     array(
         "Id" => "1337",
         "Language" => "Ping pong 🏓",
