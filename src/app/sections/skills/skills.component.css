@@ -434,6 +434,9 @@ i {
     .rhs {
         width: 69%;
     }
+    .img-responsive:first-child {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -498,5 +501,8 @@ i {
     }
     .section-heading {
         margin-bottom: 0px;
+    }
+    .img-responsive:first-child {
+        margin-top: 15px;
     }
 }
