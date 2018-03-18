@@ -15,7 +15,7 @@ export class CoursesService {
   universityContent: Courses[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201'; // window.location.port;
+    this.port = ':4201'; //window.location.port; //// 
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiCorsesUniversityUrl = this.base + '/api/courses_university.php';
     this.apiCorsesWorkUrl = this.base + '/api/courses_work.php';

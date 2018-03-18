@@ -12,7 +12,7 @@ export class EnviromentService {
   content: Enviroment[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201'; // window.location.port;
+    this.port = ':4201'; //window.location.port; //  // 
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiProgrammingUrl = this.base + '/api/enviroments.php';
   }

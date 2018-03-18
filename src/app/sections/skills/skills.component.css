@@ -341,12 +341,15 @@ th.col-3, th.col-2 {
 .placeholder {
     margin-top: 20px;
     font-size: 16px;
-    opacity: .9;
 }
 
 .placeholder-text {
     margin-left: 20px;
     float: left;
+    background-color: #f44336;
+    display: block;
+    padding: 10px 15px;
+    color: white;
 }
 
 .spinner-outer-wrapper {
@@ -357,6 +360,7 @@ th.col-3, th.col-2 {
     float: left;
     color: black;
     font-size: 20px;
+    margin-top: 8px;
     animation: blink-animation 1.5s steps(50, start) infinite;
 }
 
@@ -418,7 +422,11 @@ i {
         padding-bottom: 100px;
     }
     .summary-click {
-        display: initial;
+        display: block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #f44336;
+        color: white;
     }
     #programming-table {
         margin-top: 20px;
@@ -450,7 +458,11 @@ i {
         padding-bottom: 100px;
     }
     .summary-click {
-        display: initial;
+        display: block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #f44336;
+        color: white;
     }
     #programming-table {
         margin-top: 20px;
