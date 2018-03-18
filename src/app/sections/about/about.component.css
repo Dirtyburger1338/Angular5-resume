@@ -39,19 +39,6 @@ p {
     margin-bottom: 10px;
 }
 
-.text-hello::before {
-    content: '\25b6';
-    font-size: 20px;
-    color: #4ba4be;
-    /* color: red; */
-    padding-top: 5px;
-    padding-left: -10px;
-    margin-left: -10px;
-    position: absolute;
-    display: inline-block;
-    transform: scale(.8, 1.5);
-}
-
 .text-name>h1 {
     font-size: 30px;
     font-family: monospace;
