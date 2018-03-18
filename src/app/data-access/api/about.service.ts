@@ -14,10 +14,10 @@ export class AboutService {
   employments: Employment[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201'; //window.location.port; //// 
+    this.port = ':4201';  //  window.location.port;
     this.base = 'http://' + window.location.hostname + this.port;
-    this.apiProfileUrl = this.base + '/api/profile.php';
-    this.apiEmplymentUrl = this.base + '/api/employments.php';
+    this.apiProfileUrl = this.base + '/api/resume/profile.php';
+    this.apiEmplymentUrl = this.base + '/api/resume/employments.php';
   }
 
   public getProfile(): any {

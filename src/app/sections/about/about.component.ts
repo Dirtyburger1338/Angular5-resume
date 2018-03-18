@@ -79,7 +79,6 @@ export class AboutComponent implements OnInit {
 
   getEmplyments() {
     this.employments = this._dao.getEmplyments();
-    console.log(this.employments);
   }
 
   setAge(dateString) {
