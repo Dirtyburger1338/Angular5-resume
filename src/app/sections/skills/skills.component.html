@@ -8,7 +8,7 @@
         <div class="grid-left-inner">
             <div *ngIf="programmingLanguages.length !== 0">
                 <div @skills>
-                    <div class="summary-click">&#8627; click a list-item for a short summary</div>
+                    <div class="summary-click" data-title="&#8627; click a list-item for a short summary"></div>
                     <table id="programming-table">
                         <th class="col-1"></th>
                         <th class="col-2">Language</th>
@@ -48,7 +48,7 @@
 
             <div class="placeholder" *ngIf="programmingDescription.length === 0 && programmingLanguages.length !== 0">
                 <p class="blink">&#9668;</p>
-                <p class="placeholder-text">(Click)</p>
+                <p class="placeholder-text" data-title="(Click)"></p>
             </div>
             <div class="clear-both"></div>
         </div>
@@ -61,7 +61,7 @@
         <div *ngIf="programmingDescription.length > 0">
             <!-- Modal content -->
             <div class="modal-content">
-                <div class="modal-header" >
+                <div class="modal-header">
                     <span class="close"></span>
                     <h1 class="programmingDescriptionHeading" [innerHTML]="programmingDescription[0].Language"></h1>
                 </div>
