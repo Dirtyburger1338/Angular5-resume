@@ -299,4 +299,7 @@ p {
     .employment-img-wrapper, .img-responsive {
         margin: 0 auto;
     }
+    .employment-img-wrapper {
+        max-width: 400px;
+    }
 }
