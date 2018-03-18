@@ -17,13 +17,13 @@ $arr = array(
     "LinkedInUrl" => "",
     "Link" => "https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale",
     "EmploymentLogo" => "assets/images/sogeti_logo.png",
-    "Description" => "Henrik is a meticulous and an analytical developer with a unviversity degree.
-                        He has a quite broad programming knowledge and is currently enjoying working within the Microsoft stack (C#).
+    "Description" => "I'm a meticulous and an analytical developer with a unviversity degree.
+                        I have a quite broad programming knowledge and I'm currently enjoying working within the Microsoft stack (C#).
                         For a more detaild description, have a looksie at the other tabs.
                         <br/><br/>
-                        As a person Henrik is well structured and a social person whom often has an easy time learning new things. He can
+                        As a person I'm a well structured and social whom often has an easy time learning new things. I can
                         easely adjust to different problems and prefers to work within a group, but can of course work alone. Some
-                        of his preferences is clear goals and problem statments.
+                        of my preferences are clear goals and problem statments.
                         <br/><br/>
                         Some spare times intrests are hitting the gym, playing a variaty of sports and some brain teasing puzzles.",
     "MainLanguage" => "Swedish, mother tongue",

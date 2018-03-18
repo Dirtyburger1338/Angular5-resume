@@ -19,7 +19,7 @@ $arr = array(
         "Employer" => "Menigo AB",
         "EmployerLogo" => "assets/images/menigo_logo.jpg",
         "Link" => "https://www.menigo.se/",
-        "Description" => "Summer job during my University education as a truck driver in the storage unit."
+        "Description" => "Summer job during my university education as a truck driver in the storage unit."
     ),
     array(
         "Id" => "1",

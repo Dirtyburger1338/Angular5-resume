@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Enviroment } from '../../classes/Enviroment';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class EnviromentService {
@@ -12,7 +13,11 @@ export class EnviromentService {
   content: Enviroment[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201';  // window.location.port;
+    if (environment.production) {
+      this.port = window.location.port;
+    } else {
+      this.port = ':4201';
+    }
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiProgrammingUrl = this.base + '/api/resume/enviroments.php';
   }

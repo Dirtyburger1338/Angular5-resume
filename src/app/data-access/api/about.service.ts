@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Profile } from '../../classes/Profile';
 import { Employment } from '../../classes/Employment';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class AboutService {
@@ -14,7 +15,11 @@ export class AboutService {
   employments: Employment[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201';  //  window.location.port;
+    if (environment.production) {
+      this.port = window.location.port;
+    } else {
+      this.port = ':4201';
+    }
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiProfileUrl = this.base + '/api/resume/profile.php';
     this.apiEmplymentUrl = this.base + '/api/resume/employments.php';

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-
+import { environment } from '../../../environments/environment';
 import { ProgrammingLanguages } from '../../classes/ProgrammingLanguages';
 
 @Injectable()
@@ -14,7 +14,11 @@ export class ProgrammingLanguageService {
   programmingLanguages: ProgrammingLanguages[] = [];
 
   constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-    this.port = ':4201';  // window.location.port;
+    if (environment.production) {
+      this.port = window.location.port;
+    } else {
+      this.port = ':4201';
+    }
     this.base = 'http://' + window.location.hostname + this.port;
     this.apiProgrammingUrl = this.base + '/api/resume/programming-languages.php';
   }

@@ -276,7 +276,6 @@ p {
         width: 100%;
     }
     .rhs-wrapper {
-        /* display: inline-block; */
         margin-top: 20px;
     }
     .profile-lhs {
@@ -286,5 +285,18 @@ p {
     }
     .rhs-wrapper {
         margin: 0px;
+    }
+    .employment-lhs {
+        width: 100%;
+    }
+    .employment-rhs {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .employment-rhs-content {
+        margin-left: 0px;
+    }
+    .employment-img-wrapper, .img-responsive {
+        margin: 0 auto;
     }
 }
