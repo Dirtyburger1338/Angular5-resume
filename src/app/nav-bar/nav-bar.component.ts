@@ -1,36 +1,33 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-
-declare var jquery: any;
-declare var $: any;
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
-    this.hideGlobalSpinner();
+
   }
 
-  hideGlobalSpinner() {
-    $(document).ready(function () {
-      $('#global-spinner').css('display', 'none');
-    });
+  ngAfterViewInit() {
+    document.getElementById("global-spinner").style.display = 'none';
   }
 
   @HostListener('window:scroll', []) onWindowScroll() {
     const verticalOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     if (verticalOffset > 0) {
-      $('nav').removeClass('navbar');
-      $('nav').addClass('navbarfixed');
+      let element = document.getElementById("navbar");
+      element.classList.add("navbarfixed");
+      element.classList.remove("navbar");
     } else {
-      $('nav').removeClass('navbarfixed');
-      $('nav').addClass('navbar');
+      let element = document.getElementById("navbar");
+      element.classList.add("navbar");
+      element.classList.remove("navbarfixed");
     }
   }
 
