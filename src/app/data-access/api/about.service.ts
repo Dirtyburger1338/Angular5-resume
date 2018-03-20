@@ -27,7 +27,10 @@ export class AboutService {
 
   public getProfile(): any {
     try {
+
       return this.http.get<Profile>(this.apiProfileUrl);
+
+
     }
     catch (e) {
       console.log(e);
@@ -40,6 +43,7 @@ export class AboutService {
       if (this.employments.length > 0) {
         return this.employments;
       }
+
       this.http.get<Employment[]>(this.apiEmplymentUrl).subscribe(response => {
 
         for (let i = 0; i < response.length; i++) {
@@ -55,7 +59,6 @@ export class AboutService {
 
           this.employments.push(tmp);
         }
-
       });
 
       return this.employments;
@@ -65,4 +68,8 @@ export class AboutService {
     }
     finally { }
   }
+}
+
+function delay(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }

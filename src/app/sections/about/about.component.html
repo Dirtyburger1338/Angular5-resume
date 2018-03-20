@@ -87,7 +87,7 @@
         <div class="section-heading">Employments</div>
     </div>
     <div class="general-information-wrapper">
-        <div class="general-content" *ngIf="employments.length != 0">
+        <div class="general-content" *ngIf="employments.length !== 0; else showSpinner">
             <div *ngFor="let employer of employments">
                 <div class="employment-lhs">
                     <div class="employment-img-wrapper margin-top-20">
@@ -107,13 +107,13 @@
                 <div class="clear-both"></div>
             </div>
         </div>
-
-        <!-- spinner -->
-        <div class="spinner-outer-wrapper" *ngIf="employments.length == 0">
-            <div class="spinner-wrapper-aside">
-                <app-spinner></app-spinner>
+        <ng-template #showSpinner>
+            <div class="spinner-outer-wrapper">
+                <div class="spinner-wrapper-aside">
+                    <app-spinner></app-spinner>
+                </div>
             </div>
-        </div>
+        </ng-template>        
     </div>
 </div>
 <div class="dividor"></div>
