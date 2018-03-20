@@ -61,16 +61,16 @@
         <hr>
         <div *ngIf="profile">
             <div class="general-language-heading margin-top-20">Languages:</div>
-            <div class="general-language margin-top-20">
-                <li>{{ profile.MainLanguage }}</li>
+            <div class="margin-left-20">
+                <div class="general-language margin-top-20">
+                    <li>{{ profile.MainLanguage }}</li>
+                </div>
+                <div class="general-language">
+                    <li>{{ profile.SecondaryLanguage }}</li>
+                </div>
             </div>
-            <div class="general-language">
-                <li>{{ profile.SecondaryLanguage }}</li>
-            </div>
+            <button class="download-button">[disabled] Download resume</button>
             <hr class="margin-top-20" />
-            <div class="download-button" disabled>
-                <a class="parralax-button" data-title="[disabled] Download resume" disabled></a>
-            </div>
         </div>
         <!-- spinner -->
         <div class="spinner-outer-wrapper" *ngIf="!profile">
@@ -113,7 +113,7 @@
                     <app-spinner></app-spinner>
                 </div>
             </div>
-        </ng-template>        
+        </ng-template>
     </div>
 </div>
 <div class="dividor"></div>

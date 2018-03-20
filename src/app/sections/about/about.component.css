@@ -29,11 +29,6 @@ p {
     margin-left: 20px;
 }
 
-.profile-img-wrapper {
-    float: right;
-    margin-right: 20px;
-}
-
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -234,71 +229,25 @@ p {
     margin-bottom: 20px;
 }
 
-/* button */
+.margin-left-20 {
+    margin-left: 20px;
+}
 
 .download-button {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: block;
-}
-
-a.parralax-button {
-    width: 200px;
-    height: 30px;
-    line-height: 1.8;
-    position: relative;
-    padding: 1.2em 2em;
-    text-decoration: none;
-    text-align: center;
-    cursor: not-allowed;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    border: none;
     color: white;
-}
-
-a.parralax-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: #ee0979;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #ee0979, #ff6a00);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #ee0979, #ff6a00);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border-radius: 4px;
-    -webkit-transition: box-shadow .5s ease, -webkit-transform .2s ease;
-    transition: box-shadow .5s ease, -webkit-transform .2s ease;
-    transition: box-shadow .5s ease, transform .2s ease;
-    transition: box-shadow .5s ease, transform .2s ease, -webkit-transform .2s ease;
-    will-change: transform;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
-    transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
-}
-
-a:hover::before {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-a::after {
-    position: relative;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    content: attr(data-title);
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: transform .2s ease, -webkit-transform .2s ease;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: not-allowed;
+    background-color: #eeeeee;
+    color: black;
     font-weight: bold;
-    letter-spacing: .01em;
-    will-change: transform;
-    -webkit-transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
-    transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+    border: 2px solid dimgray;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {
