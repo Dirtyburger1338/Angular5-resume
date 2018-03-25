@@ -31,4 +31,8 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     }
   }
 
+  scrollTop(){
+    window.scrollTo(0, 0);
+  }
+
 }

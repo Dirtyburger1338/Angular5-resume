@@ -13,6 +13,7 @@
             </div>
             <div class="profile-rhs border-box">
                 <div class="rhs-wrapper">
+                    <h1>[Alpha version]</h1>
                     <div class="text-hello">hello there</div>
                     <div class="text-name">
                         <h1 @name>
@@ -35,6 +36,7 @@
                             <span class="content">{{profile.Employer}}</span>
                         </li>
                     </ul>
+                    <button class="download-button">[disabled] Download resume</button>
                 </div>
             </div>
             <div class="clear-both"></div>
@@ -69,8 +71,6 @@
                     <li>{{ profile.SecondaryLanguage }}</li>
                 </div>
             </div>
-            <button class="download-button">[disabled] Download resume</button>
-            <hr class="margin-top-20" />
         </div>
         <!-- spinner -->
         <div class="spinner-outer-wrapper" *ngIf="!profile">

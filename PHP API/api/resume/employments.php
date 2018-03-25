@@ -10,7 +10,7 @@ $arr = array(
         "Employer" => "Sogeti Sverige AB",
         "EmployerLogo" => "assets/images/sogeti_logo.png",
         "Link" => "https://www.sogeti.se/",
-        "Description" => "Currently working as a software engineer at Sogeti."
+        "Description" => "Currently working as a software engineer at Sogeti. Some of my responsibilities are doing project estimations, system testing, system maintenance and developing new systems or features."
     ),
     array(
         "Id" => "1",

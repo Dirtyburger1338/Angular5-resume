@@ -73,7 +73,7 @@ $arr = array(
         "Id" => "12",
         "Language" => "MS T-SQL",
         "Stars" => "2/5",
-        "Description" => "This is the other part of my day to day work. Stored prosedures mostly.",
+        "Description" => "This is the other part of my day to day work. Stored prosedures mostly combined with Entity Framework.",
     ),
     array(
         "Id" => "13",
