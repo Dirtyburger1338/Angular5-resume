@@ -11,6 +11,7 @@
             <li *ngFor="let education of Educations" class="list-item">
                 <div class="education-item-wrapper">
                     <div class="lhs">
+                        <h2 class="education-heading-lowres">{{education.Heading}}</h2>
                         <div class="education-img-wrapper">
                             <img class="img-responsive" [src]="education.Image" />
                         </div>
@@ -35,7 +36,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>               
                 <div class="clear-both"></div>
             </li>
         </ul>
@@ -61,6 +62,7 @@
             <li *ngFor="let cours of UniversityCourses" class="list-item">
                 <div class="education-item-wrapper">
                     <div class="lhs">
+                        <h2 class="education-heading-lowres">{{cours.Heading}}</h2>
                         <div class="education-img-wrapper">
                             <img class="img-responsive" [src]="cours.Image" />
                         </div>
@@ -71,8 +73,8 @@
                     </div>
                     <div class="rhs">
                         <div class="rhs-content-wrapper">
-                            <h2 class="education-heading"> {{cours.Heading}} </h2>
-                            <p class="education-main-text"> {{cours.Context}} </p>
+                            <h2 class="education-heading">{{cours.Heading}}</h2>
+                            <p class="education-main-text">{{cours.Context}}</p>
                             <ul>
                                 <div *ngIf="cours.List">
                                     <li class="sublist-item" *ngFor="let listItem of cours.List">
@@ -85,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <div class="clear-both"></div>
             </li>
         </ul>
@@ -109,8 +111,9 @@
     <div class="courses-inner-content">
         <ul *ngIf="WorkCourses">
             <li *ngFor="let cours of WorkCourses" class="list-item">
-                <div class="education-item-wrapper">
+                <div class="education-item-wrapper">                    
                     <div class="lhs">
+                        <h2 class="education-heading-lowres">{{cours.Heading}}</h2>
                         <div class="education-img-wrapper">
                             <img class="img-responsive" [src]="cours.Image" />
                         </div>
@@ -121,8 +124,8 @@
                     </div>
                     <div class="rhs">
                         <div class="rhs-content-wrapper">
-                            <h2 class="education-heading"> {{cours.Heading}} </h2>
-                            <p class="education-main-text"> {{cours.Context}} </p>
+                            <h2 class="education-heading">{{cours.Heading}}</h2>
+                            <p class="education-main-text">{{cours.Context}}</p>
                             <ul>
                                 <div *ngIf="cours.List">
                                     <li class="sublist-item" *ngFor="let listItem of cours.List">
@@ -134,8 +137,8 @@
                                 <a class="link-to-education" href="{{cours.Link}}" target="_blank">Link</a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div>                    
+                </div>                
                 <div class="clear-both"></div>
             </li>
         </ul>

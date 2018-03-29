@@ -86,6 +86,7 @@
             <li *ngFor="let enviroment of enviroments" class="list-item">
                 <div class="enviroments-item-wrapper">
                     <div class="lhs">
+                        <h2 class="enviroments-heading-lowres">{{enviroment.Heading}}</h2>
                         <div class="enviroments-img-wrapper">
                             <img class="img-responsive" [src]="enviroment.Image" />
                         </div>
@@ -95,8 +96,8 @@
                     </div>
                     <div class="rhs">
                         <div class="rhs-content-wrapper">
-                            <h2 class="enviroments-heading"> {{enviroment.Heading}} </h2>
-                            <p class="enviroments-main-text"> {{enviroment.Context}} </p>
+                            <h2 class="enviroments-heading">{{enviroment.Heading}}</h2>
+                            <p class="enviroments-main-text">{{enviroment.Context}}</p>
                             <ul>
                                 <div *ngIf="enviroment.List">
                                     <li class="sublist-item" *ngFor="let listItem of enviroment.List">

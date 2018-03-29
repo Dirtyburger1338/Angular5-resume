@@ -39,7 +39,15 @@ a:hover, a:active {
 }
 
 .list-item {
-    margin-top: 10px;
+    margin: 20px;
+}
+
+.list-item {
+    border-bottom: 1px solid black;
+}
+
+.list-item:last-of-type {
+    border-bottom: none;
 }
 
 .list-item:first-child {
@@ -106,10 +114,12 @@ a:hover, a:active {
 
 .link-to-education-wrapper {
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .link-to-education {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .dividor {
@@ -124,9 +134,9 @@ a:hover, a:active {
     display: block;
     font-size: 20px;
     padding: 10px;
-    border: 1px solid black;
-    background-color: #3d3d3d;
-    color: white;
+    border: 2px solid dimgray;
+    background-color: #eeeeee;
+    color: black;
     box-sizing: border-box;
     position: relative;
     margin-top: -21px;
@@ -136,6 +146,19 @@ a:hover, a:active {
     float: right;
     text-transform: uppercase;
     font-style: italic;
+}
+
+.rhs:nth-last-of-type(1) {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.education-heading-lowres {
+    display: none;
+    font-size: 23px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -167,6 +190,12 @@ a:hover, a:active {
         margin: 0px;
         padding: 0px;
         width: 100%;
+    }
+    .education-heading-lowres {
+        display: inline-block;
+    }
+    .education-heading{
+        display: none;
     }
     .education-img-wrapper {
         margin: 20px;

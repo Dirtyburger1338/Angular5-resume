@@ -88,7 +88,7 @@
     </div>
     <div class="general-information-wrapper">
         <div class="general-content" *ngIf="employments.length !== 0; else showSpinner">
-            <div *ngFor="let employer of employments">
+            <div class="employment-content-wrapper" *ngFor="let employer of employments">
                 <div class="employment-lhs">
                     <div class="employer-heading-lowres">{{employer.Employer}}</div>                    
                     <div class="employment-img-wrapper margin-top-20">
