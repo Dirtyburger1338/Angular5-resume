@@ -102,6 +102,10 @@ p {
     border-bottom: 1px solid black;
 }
 
+.employment-content-wrapper:last-of-type {
+  border-bottom: none;
+}
+
 .employer-heading {
     font-size: 23px;
     font-weight: 500;
