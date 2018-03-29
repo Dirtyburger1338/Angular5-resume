@@ -20,6 +20,13 @@ p {
     width: 30%;
 }
 
+.staticMessage {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Open Sans";
+}
+
 .profile-rhs {
     width: 70%;
 }
@@ -89,6 +96,13 @@ p {
 }
 
 .employer-heading {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.employer-heading-lowres{
+    display: none;
+    margin-bottom: 20px;
     font-size: 23px;
     font-weight: 500;
 }
@@ -259,10 +273,17 @@ p {
 @media screen and (max-width: 960px) {
     .general-content {
         margin-top: 20px;
-    }
+    }    
 }
 
 @media screen and (max-width: 768px) {
+    .employer-heading-lowres {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .employer-heading {
+        display: none;
+    }
     .about-profile {
         clear: both;
         float: initial;

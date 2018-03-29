@@ -30,7 +30,7 @@ $arr = array(
     array(
         "Id" => "5",
         "Language" => "Angular 2+",
-        "Stars" => "1/5",
+        "Stars" => "2/5",
         "Description" => "This page is built with Angular 5, but I have not build anything in production - yet.",
     ),
     array(

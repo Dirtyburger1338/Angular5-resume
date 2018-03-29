@@ -13,7 +13,7 @@
             </div>
             <div class="profile-rhs border-box">
                 <div class="rhs-wrapper">
-                    <h1>[Alpha version]</h1>
+                    <h1 class="staticMessage">{{ staticMessage }}</h1>
                     <div class="text-hello">hello there</div>
                     <div class="text-name">
                         <h1 @name>
@@ -90,6 +90,7 @@
         <div class="general-content" *ngIf="employments.length !== 0; else showSpinner">
             <div *ngFor="let employer of employments">
                 <div class="employment-lhs">
+                    <div class="employer-heading-lowres">{{employer.Employer}}</div>                    
                     <div class="employment-img-wrapper margin-top-20">
                         <img class="img-responsive" [src]="employer.EmployerLogo" />
                     </div>
@@ -98,7 +99,7 @@
                         <p class="fromTo">{{employer.From}}{{employer.To}}</p>
                     </div>
                 </div>
-                <div class="employment-rhs margin-top-20">
+                <div class="employment-rhs">
                     <div class="employment-rhs-content">
                         <div class="employer-heading">{{employer.Employer}}</div>
                         <div class="employer-description">{{employer.Description}}</div>

@@ -62,10 +62,12 @@ import { Employment } from '../../classes/Employment';
 export class AboutComponent implements OnInit {
   profile: Profile;
   employments: Employment[] = [];
+  staticMessage: string;
 
   constructor(private _dao: AboutService) { }
 
   ngOnInit() {
+    this.staticMessage = "[ Alpha version ]";
     this.getProfileData();
     this.getEmplyments();
   }
