@@ -99,7 +99,7 @@ p {
 }
 
 .employment-content-wrapper {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
 }
 
 .employment-content-wrapper:last-of-type {

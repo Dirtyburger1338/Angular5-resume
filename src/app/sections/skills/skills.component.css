@@ -278,7 +278,7 @@ th.col-3, th.col-2 {
 }
 
 .enviroments-item-wrapper {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
 }
 
 .enviroments-item-wrapper:last-of-type {

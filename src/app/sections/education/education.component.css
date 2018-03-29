@@ -43,7 +43,7 @@ a:hover, a:active {
 }
 
 .list-item {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid gray;
 }
 
 .list-item:last-of-type {
