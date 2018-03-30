@@ -195,7 +195,8 @@ th.col-3, th.col-2 {
 
 .enviroments-heading-lowres {
     font-size: 23px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     display: none;
 }
 
@@ -457,8 +458,8 @@ i {
         display: block;
         margin-top: 20px;
         padding: 10px 15px;
-        color:white;
-        background-color: #f44336;  
+        color: white;
+        background-color: #f44336;
     }
     #programming-table {
         margin-top: 20px;
@@ -474,7 +475,6 @@ i {
 @media screen and (max-width: 768px) {
     .enviroments-heading-lowres {
         display: inline-block;
-        margin: 20px;
     }
     .enviroments-heading {
         display: none;
@@ -529,11 +529,11 @@ i {
     .education-heading {
         margin-top: 20px;
     }
-    .rhs-content-wrapper {
-        padding: 10px;
-    }
     .sublist-item {
         margin-left: 30px;
+    }
+    .list-item {
+        margin: 10px;
     }
     .timeline {
         margin-top: 5px;

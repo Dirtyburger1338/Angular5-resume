@@ -156,9 +156,9 @@ a:hover, a:active {
 .education-heading-lowres {
     display: none;
     font-size: 23px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-top: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -197,17 +197,14 @@ a:hover, a:active {
     .education-heading{
         display: none;
     }
-    .education-img-wrapper {
-        margin: 20px;
-    }
     .education-heading {
         margin-top: 20px;
     }
-    .rhs-content-wrapper {
-        padding: 10px;
-    }
     .sublist-item {
         margin-left: 30px;
+    }
+    .list-item {
+        margin: 10px;
     }
     .section-heading {
         margin-bottom: 0px;
