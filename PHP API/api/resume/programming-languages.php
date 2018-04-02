@@ -24,7 +24,7 @@ $arr = array(
     array(
         "Id" => "4",
         "Language" => "AngularJS",
-        "Stars" => "1/5",
+        "Stars" => "2/5",
         "Description" => "I made a <i style='font-style: italic; text-decoration: underline;'>\"Magic mirror\"</i> at home with this - google it.",
     ),
     array(
@@ -42,13 +42,13 @@ $arr = array(
     array(
         "Id" => "7",
         "Language" => "CSS",
-        "Stars" => "2/5",
+        "Stars" => "3/5",
         "Description" => "I'm alright, I guess. Try this page out on different browser or devices for instance.",
     ),
     array(
         "Id" => "8",
         "Language" => "JavaScript",
-        "Stars" => "2/5",
+        "Stars" => "3/5",
         "Description" => "<span style='background-color: black; opacity: 0.8; padding: 10px;'><span style='color: #169eb6;'>var</span> <span style='color: lightblue;'>omg</span> <span style='color: white;'>=<span> <span style='color: #db6923'>\"everything is a string language\"</span><span style='color: white; padding-right: 10px;'>;</span> <span style='color: green;'></span></span> ",
     ),
     array(
@@ -72,7 +72,7 @@ $arr = array(
     array(
         "Id" => "12",
         "Language" => "MS T-SQL",
-        "Stars" => "2/5",
+        "Stars" => "3/5",
         "Description" => "This is the other part of my day to day work. Stored prosedures mostly combined with Entity Framework.",
     ),
     array(
@@ -84,7 +84,7 @@ $arr = array(
     array(
         "Id" => "14",
         "Language" => "ASP.NET Web forms",
-        "Stars" => "2/5",
+        "Stars" => "3/5",
         "Description" => "I do know a some stuffs here aswell. But I don't really like this kind of post-back shenanigans.",
     ),
     array(

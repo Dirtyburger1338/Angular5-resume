@@ -342,7 +342,8 @@ p {
     }
     .employment-rhs {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        margin-top: 0px;
     }
     .employment-rhs-content {
         margin-left: 0px;
@@ -352,5 +353,14 @@ p {
     }
     .employment-img-wrapper {
         max-width: 400px;
+    }
+    .about-content-wrapper {
+        padding: 10px;
+    }
+    .general-information-wrapper {
+        padding: 10px;
+    }
+    .employer-description {
+        margin-top: 0px;
     }
 }
