@@ -148,11 +148,6 @@ a:hover, a:active {
     font-style: italic;
 }
 
-.rhs:nth-last-of-type(1) {
-    display: inline-block;
-    margin-top: 20px;
-}
-
 .education-heading-lowres {
     display: none;
     font-size: 23px;

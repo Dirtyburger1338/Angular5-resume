@@ -27,7 +27,7 @@ export class AboutService {
 
   public getProfile(): any {
     try {
-
+      console.log("get: " + this.apiProfileUrl);
       return this.http.get<Profile>(this.apiProfileUrl);
 
 
