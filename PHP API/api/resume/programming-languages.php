@@ -112,6 +112,12 @@ $arr = array(
         "Description" => "Tried this out for a bit in Advent of Code: <a href='http://www.adventofcode.com' target='_blank'>adventofcode.com</a>.",
     ),
     array(
+        "Id" => "19",
+        "Language" => "SASS / SCSS",
+        "Stars" => "2/5",
+        "Description" => "Currently taking some online courses regarding sass / scss hence it's getting quite important to use graceful degradations for cross browser support.",
+    ),
+    array(
         "Id" => "1337",
         "Language" => "Ping pong 🏓",
         "Stars" => "5/5",
