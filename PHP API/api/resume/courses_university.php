@@ -48,7 +48,7 @@ $arr = array(
         "Introduction" => "Got an intrest in AI",
         "List" => array(
         ),
-        "Link" => "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "Link" => "https://en.wikipedia.org/wiki/Blockchain",
     ),
     array(
         "Id" => "4",
