@@ -5,6 +5,7 @@ import { Courses } from '../../classes/Courses';
 
 import { EducationService } from '../../data-access/api/education.service';
 import { CoursesService } from '../../data-access/api/courses.service';
+import { HelpersService } from '../../utilities/helpers/helpers.service';
 
 @Component({
   selector: 'app-education',
@@ -18,7 +19,7 @@ export class EducationComponent implements OnInit {
   UniversityCourses: Courses[] = [];
   counter = 0;
 
-  constructor(private _daoEdu: EducationService, private _daoCourses: CoursesService) { }
+  constructor(private _daoEdu: EducationService, private _daoCourses: CoursesService,  private _helperDao: HelpersService) { }
 
   ngOnInit() {
     this.getEducations();
@@ -27,14 +28,23 @@ export class EducationComponent implements OnInit {
   }
 
   getEducations() {
-    this.Educations = this._daoEdu.getEducations();
+    this._daoEdu.getEducations().subscribe(data => {
+      data = this._helperDao.appendImageAssetsFolderToString(data);
+      this.Educations = data;
+    });
   }
 
   getWorkCourses() {
-    this.WorkCourses = this._daoCourses.getWorkCourses();
+    this._daoCourses.getWorkCourses().subscribe(data => {
+      data = this._helperDao.appendImageAssetsFolderToString(data);
+      this.WorkCourses = data;
+    });
   }
 
   getUniversityCourses() {
-    this.UniversityCourses = this._daoCourses.getUniversityCourses();
-  }  
+    this._daoCourses.getUniversityCourses().subscribe(data => {
+      data = this._helperDao.appendImageAssetsFolderToString(data);
+      this.UniversityCourses = data;
+    });
+  } 
 }

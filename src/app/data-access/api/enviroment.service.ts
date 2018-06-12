@@ -22,36 +22,7 @@ export class EnviromentService {
     this.apiProgrammingUrl = this.base + '/api/resume/enviroments.php';
   }
 
-  public getEnviroments(): Enviroment[] {
-    try {
-      if (this.content.length > 0) {
-        return this.content;
-      }
-
-      this.http.get<Enviroment[]>(this.apiProgrammingUrl).subscribe(response => {
-
-        for (let i = 0; i < response.length; i++) {
-
-          const tmp = new Enviroment(
-            response[i].Id,
-            response[i].ShortDescription,
-            response[i].Heading,
-            response[i].Context,
-            'assets/images/' + response[i].Image,
-            response[i].Introduction,
-            response[i].List,
-            response[i].Link
-          );
-
-          this.content.push(tmp);
-        }
-
-      });
-
-      return this.content;
-    } catch (e) {
-      console.log(e);
-    }
-    finally { }
+  public getEnviroments(): any {
+      return this.http.get<Enviroment[]>(this.apiProgrammingUrl);
   }
 }

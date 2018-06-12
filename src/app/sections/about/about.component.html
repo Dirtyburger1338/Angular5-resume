@@ -1,10 +1,27 @@
 <div class="padding"></div>
 <div class="dividor"></div>
+
+<!-- templates -->
+<ng-template class="spinner-outer-wrapper" #profileSpinner>
+    <div class="spinner-wrapper-aside" *ngIf="!profileError; else error">
+        <app-spinner></app-spinner>
+    </div>
+</ng-template>
+<ng-template class="spinner-outer-wrapper" #employmentSpinner>
+        <div class="spinner-wrapper-aside" *ngIf="!employmentError; else error">
+            <app-spinner></app-spinner>
+        </div>
+    </ng-template>
+<ng-template #error>
+    <div class="error">Error loading data from server.</div>
+</ng-template>
+<!-- end templates -->
+
 <div class="container">
     <div class="section-heading-wrapper">
         <div class="section-heading">Profile</div>
     </div>
-    <div *ngIf="profile">
+    <div *ngIf="!isProfileLoading && profile; else profileSpinner">
         <div class="about-content-wrapper">
             <div class="profile-lhs border-box">
                 <div class="profile-img-wrapper">
@@ -14,7 +31,7 @@
             <div class="profile-rhs border-box">
                 <div class="rhs-wrapper">
                     <h1 class="staticMessage">{{ staticMessage }}</h1>
-                    <div class="text-hello">hello there</div>
+                    <div class="text-hello">{{ profile.Greeting }}</div>
                     <div class="text-name">
                         <h1 @name>
                             <span>I'm</span> {{ profile.FullName }}
@@ -25,15 +42,15 @@
                     <ul class="profile-list">
                         <li @aboutAge>
                             <span class="title">Age</span>
-                            <span class="content">{{profile.Age}}</span>
+                            <span class="content">{{ profile.Age }}</span>
                         </li>
                         <li @aboutCity>
                             <span class="title">City</span>
-                            <span class="content">{{profile.City}}</span>
+                            <span class="content">{{ profile.City }}</span>
                         </li>
                         <li @aboutEmployer>
                             <span class="title">Employer</span>
-                            <span class="content">{{profile.Employer}}</span>
+                            <span class="content">{{ profile.Employer }}</span>
                         </li>
                     </ul>
                     <button class="download-button">[disabled] Download resume</button>
@@ -42,26 +59,19 @@
             <div class="clear-both"></div>
         </div>
     </div>
-    <div class="spinner-outer-wrapper" *ngIf="!profile">
-        <div class="spinner-wrapper-aside">
-            <app-spinner></app-spinner>
-        </div>
-    </div>
 </div>
-
 <div class="dividor"></div>
-
 <div class="container">
     <div class="section-heading-wrapper">
         <div class="section-heading">General information</div>
     </div>
-    <div class="general-information-wrapper">
-        <div class="general-content" *ngIf="profile">
+    <div class="general-information-wrapper" *ngIf="!isProfileLoading && profile; else profileSpinner; else profileSpinner">
+        <div class="general-content">
             <div class="general-short-description-heading">Short description</div>
             <div class="general-text margin-top-20 margin-bottom-20" [innerHTML]="profile.Description | safeHtml"></div>
         </div>
-        <hr>
         <div *ngIf="profile">
+            <hr>
             <div class="general-language-heading margin-top-20">Languages:</div>
             <div class="margin-left-20">
                 <div class="general-language margin-top-20">
@@ -72,25 +82,18 @@
                 </div>
             </div>
         </div>
-        <!-- spinner -->
-        <div class="spinner-outer-wrapper" *ngIf="!profile">
-            <div class="spinner-wrapper-aside">
-                <app-spinner></app-spinner>
-            </div>
-        </div>
     </div>
 </div>
 <div class="dividor"></div>
-
 <div class="container">
     <div class="section-heading-wrapper">
         <div class="section-heading">Employments</div>
     </div>
-    <div class="general-information-wrapper">
-        <div class="general-content" *ngIf="employments.length !== 0; else showSpinner">
+    <div class="general-information-wrapper" *ngIf="!emplymentError && employments; else employmentSpinner">
+        <div class="general-content">
             <div class="employment-content-wrapper" *ngFor="let employer of employments">
                 <div class="employment-lhs">
-                    <div class="employer-heading-lowres">{{employer.Employer}}</div>                    
+                    <div class="employer-heading-lowres">{{employer.Employer}}</div>
                     <div class="employment-img-wrapper margin-top-20">
                         <img class="img-responsive" [src]="employer.EmployerLogo" />
                     </div>
@@ -108,13 +111,6 @@
                 <div class="clear-both"></div>
             </div>
         </div>
-        <ng-template #showSpinner>
-            <div class="spinner-outer-wrapper">
-                <div class="spinner-wrapper-aside">
-                    <app-spinner></app-spinner>
-                </div>
-            </div>
-        </ng-template>
     </div>
 </div>
 <div class="dividor"></div>

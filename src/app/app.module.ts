@@ -18,6 +18,7 @@ import { EducationService } from './data-access/api/education.service';
 import { CoursesService } from './data-access/api/courses.service';
 import { EnviromentService } from './data-access/api/enviroment.service';
 import { AboutService } from './data-access/api/about.service';
+import { HelpersService } from '../app/utilities/helpers/helpers.service';
 
 import { SpinnerComponent } from './spinner/spinner.component';
 import { DividerComponent } from './sections/skills/divider/divider.component';
@@ -46,7 +47,14 @@ import { DividerNancyComponent } from './sections/education/divider-nancy/divide
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ProgrammingLanguageService, EducationService, CoursesService, EnviromentService, AboutService],
+  providers: [
+    ProgrammingLanguageService, 
+    EducationService, 
+    CoursesService, 
+    EnviromentService, 
+    AboutService, 
+    HelpersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

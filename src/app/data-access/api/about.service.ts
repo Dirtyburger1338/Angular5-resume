@@ -26,47 +26,11 @@ export class AboutService {
   }
 
   public getProfile(): any {
-    try {
-      console.log("get: " + this.apiProfileUrl);
-      return this.http.get<Profile>(this.apiProfileUrl);
-
-
-    }
-    catch (e) {
-      console.log(e);
-    }
-    finally { }
+      return this.http.get<Profile>(this.apiProfileUrl);    
   }
 
-  public getEmplyments(): Employment[] {
-    try {
-      if (this.employments.length > 0) {
-        return this.employments;
-      }
-
-      this.http.get<Employment[]>(this.apiEmplymentUrl).subscribe(response => {
-
-        for (let i = 0; i < response.length; i++) {
-
-          const tmp = new Employment(
-            response[i].Id,
-            response[i].From,
-            response[i].To,
-            response[i].Employer,
-            response[i].EmployerLogo,
-            response[i].Description
-          );
-
-          this.employments.push(tmp);
-        }
-      });
-
-      return this.employments;
-    }
-    catch (e) {
-      console.log(e);
-    }
-    finally { }
+  public getEmplyments(): any {
+      return this.http.get<Employment[]>(this.apiEmplymentUrl);
   }
 }
 

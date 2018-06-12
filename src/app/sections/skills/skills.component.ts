@@ -6,6 +6,7 @@ import { EnviromentService } from '../../data-access/api/enviroment.service';
 import { trigger, style, transition, animate, keyframes, query, stagger, state } from '@angular/animations';
 import { SafeHtmlPipe } from '../../safe-html.pipe';
 import { Enviroment } from '../../classes/Enviroment';
+import { HelpersService } from '../../utilities/helpers/helpers.service';
 
 @Component({
   selector: 'app-skills',
@@ -54,14 +55,23 @@ export class SkillsComponent implements OnInit {
   enviroments: Enviroment[] = [];
   rating: Rating[] = [];
 
-  constructor(private _programmingDAO: ProgrammingLanguageService, private _enviromentService: EnviromentService) { }
+  constructor(private _programmingDAO: ProgrammingLanguageService, private _enviromentService: EnviromentService, private _helperDao: HelpersService) { }
 
   ngOnInit() {
     delay(0).then(() => {
-      this.programmingLanguages = this._programmingDAO.getProgrammingLanguages();
+      this._programmingDAO.getProgrammingLanguages().subscribe(data => {
+        console.log(data);
+        for(let i = 0; i < data.length; i++){
+          data[i].Stars = this._helperDao.convertToStars(data[i].Stars);
+        }    
+        this.programmingLanguages = data;
+      });
     });
-    this.enviroments = this._enviromentService.getEnviroments();
-    this.loadRating();
+    this._enviromentService.getEnviroments().subscribe(data => {
+      data = this._helperDao.appendImageAssetsFolderToString(data);
+      this.enviroments = data;
+    });
+    this.getRatingMetric();
   }
 
   changeProgrammingDescription(index: number, $event: any) {
@@ -75,7 +85,7 @@ export class SkillsComponent implements OnInit {
     this.openModal();
   }
 
-  loadRating() {
+  getRatingMetric() {
     for (let i = 0; i < 5; i++) {
       this.rating.push(new Rating(i, '', ''));
       for (let j = 0; j <= i; j++) {
@@ -115,7 +125,6 @@ export class SkillsComponent implements OnInit {
 
     if (window.innerWidth > 960) { return; }
 
-
     const modal = document.getElementById('myModal');
 
     // Get the button that opens the modal
@@ -133,7 +142,7 @@ export class SkillsComponent implements OnInit {
         modal.style.display = 'none';
       }
     };
-  }
+  }  
 }
 
 function delay(ms: number) {

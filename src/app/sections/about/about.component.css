@@ -81,15 +81,11 @@ p {
 }
 
 .employment-lhs {
-    box-sizing: border-box;
-    width: 20%;
-    float: left;
+    width: 30%;
 }
 
 .employment-rhs {
-    float: left;
-    box-sizing: border-box;
-    width: 80%;
+    width: 70%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -100,10 +96,18 @@ p {
 
 .employment-content-wrapper {
     border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: row;
 }
 
 .employment-content-wrapper:last-of-type {
     border-bottom: none;
+}
+
+.employment-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    
 }
 
 .employer-heading {
@@ -266,6 +270,16 @@ p {
     margin-top: 20px;
 }
 
+.spinner-wrapper-aside {
+    margin: 20px;
+}
+
+.error {
+    margin: 20px;
+    color: red;
+    font-size: 18px;
+}
+
 @media screen and (max-width: 960px) {
     .general-content {
         margin-top: 20px;
@@ -335,9 +349,12 @@ p {
     }
     .employment-img-wrapper, .img-responsive {
         margin: 0 auto;
-    }
+    } 
     .employment-img-wrapper {
         max-width: 400px;
+    }
+    .employment-content-wrapper {
+        flex-direction: column;
     }
     .about-content-wrapper {
         padding: 10px;

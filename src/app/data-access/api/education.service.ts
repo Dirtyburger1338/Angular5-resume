@@ -22,38 +22,7 @@ export class EducationService {
     this.apiProgrammingUrl = this.base + '/api/resume/education.php';
   }
 
-  public getEducations(): Education[] {
-    try {
-      if (this.content.length > 0) {
-        return this.content;
-      }
-
-      this.http.get<Education[]>(this.apiProgrammingUrl).subscribe(response => {
-
-        for (let i = 0; i < response.length; i++) {
-
-          const tmp = new Education(
-            response[i].Id,
-            response[i].ShortDescription,
-            response[i].From,
-            response[i].To,
-            response[i].Heading,
-            response[i].Context,
-            'assets/images/' + response[i].Image,
-            response[i].Introduction,
-            response[i].List,
-            response[i].Link
-          );
-
-          this.content.push(tmp);
-        }
-
-      });
-
-      return this.content;
-    } catch (e) {
-      console.log(e);
-    }
-    finally { }
+  public getEducations(): any {
+      return this.http.get<Education[]>(this.apiProgrammingUrl);
   }
 }
