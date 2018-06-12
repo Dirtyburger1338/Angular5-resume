@@ -24,7 +24,7 @@ $arr = array(
         "List" => array(
             "Administrating UNIX systems",
             "Raspberry pies",
-            "sudo make me a sandwich -R",
+            "sudo make me a sandwich (xkcd)",
         ),
         "Link" => "https://en.wikipedia.org/wiki/Linux",
     ),
@@ -46,7 +46,7 @@ $arr = array(
     array(
         "Id" => "4",
         "ShortDescription" => "EpiServer 6",
-        "Heading" => "EpiSerer 6 - Content Managment System (CMS)",
+        "Heading" => "EpiServer 6 - Content Managment System (CMS)",
         "Context" => "Been working in a project where EpiServer 6 was used. Defining pages and displaying properties pretty much, however there is alot more to this CMS tool.",
         "Image" => "epi_logo.png",
         "Introduction" => "Intro",

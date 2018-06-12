@@ -1,11 +1,5 @@
 .container {
-    margin: 10px 0px 10px 0px;
-    background-color: white;
-    margin: 0 auto;
-    margin: 30px auto 30px auto;
-    max-width: 1100px;
-    box-shadow: 4px 4px 10px black;
-    border: 1px solid black;
+    margin-top: 40px;
 }
 
 .container-inner {
